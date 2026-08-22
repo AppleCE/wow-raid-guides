@@ -1,11 +1,11 @@
 EncounterID:3497;Name:二團 劇毒 H 3王 The Lost Explorers;Difficulty:Heroic
-time:8;ph:1;tag:呆小鄭;spellid:120517;text:光環;TTS:true;dur:3;
+time:8;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:52;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
-time:80;ph:1;tag:呆小鄭;spellid:120517;text:光環;TTS:true;dur:3;
+time:80;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:108;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
-time:147;ph:1;tag:呆小鄭;spellid:120517;text:光環;TTS:true;dur:3;
+time:147;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:174;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
-time:215;ph:1;tag:呆小鄭;spellid:120517;text:光環;TTS:true;dur:3;
+time:215;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:250;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
-time:282;ph:1;tag:呆小鄭;spellid:120517;text:光環;TTS:true;dur:3;
+time:282;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:296;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
