@@ -32,6 +32,7 @@ time:280;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:3;
 time:304;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
 time:322;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
 time:329;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:3;
+time:330;ph:1;tag:Darksix;spellid:97462;text:振奮咆哮;TTS:true;dur:3;
 time:384;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
 time:387;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:3;
 time:393;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:3;
