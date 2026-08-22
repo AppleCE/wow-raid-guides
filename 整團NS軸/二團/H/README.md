@@ -2,5 +2,6 @@
 
 - [劇毒 3 王 The Lost Explorers](劇毒3王.txt)
 - [劇毒 4 王 Vashnik the Malignant](劇毒4王.txt)
+- [劇毒 5 王 Sszorak](劇毒5王.txt)
 
 這裡放五補完整排招；各補職資料夾內仍保留只含本人技能的版本。
