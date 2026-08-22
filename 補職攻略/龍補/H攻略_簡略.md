@@ -1,6 +1,6 @@
 # 龍補 H攻略（簡略）
 
-適用角色：二團 `黛芙妮絲`。  
+適用範圍：通用龍補攻略，可供第三團 `龍餘` 與其他龍補使用。
 版本：12.1。時間均為開怪後秒數；目前整理浪縛單王與劇毒 H1–H7，劇毒 H8 待補。長期目標為浪縛單王、劇毒 H 全部與 M 全部，隨進度逐王增加。
 
 ## 30 秒速查
@@ -178,6 +178,6 @@ Google 指定軸：[WCL `3AGyf4Ya7BLvZtPH` fight 59](https://tw.warcraftlogs.com
 
 1. **社群攻略定義機制與正常應對**：浪縛單王參考 Icy Veins 與 SkyCoach；劇毒 H1–H7 以 Raidstrats、Wowhead 與既有團隊攻略摘要交叉。
 2. **WCL 定義實際波次、戰術與開招**：H3–H5 沿用團隊指定 WCL；H6 使用 [龍補樣本](https://www.warcraftlogs.com/reports/zn1XWbqh9pd8TFwV?fight=41&type=casts)；H7 使用 [Mingevoee 8:20 擊殺](https://www.warcraftlogs.com/reports/vfhTpM36BabRn4k1?fight=24&type=casts&source=1)。
-3. **角色草案決定龍補要做什麼**：H6–H7 先採英雄過王龍補 observed 骨架；收到龍餘或本團同戰術紀錄後，再依相同技能 occurrence 校時。
+3. **角色草案決定龍補要做什麼**：H6–H7 先採英雄過王龍補 observed 骨架；收到使用者同戰術紀錄後，再依相同技能 occurrence 校時。
 
 資料狀態：浪縛單王與 H1–H2 為社群機制加近似配置 WCL 草案；H3 已採同場龍補 observed 骨架；H4–H5 有指定戰術 WCL；H6–H7 為英雄 WCL observed 加機制錨點；H8 待補。

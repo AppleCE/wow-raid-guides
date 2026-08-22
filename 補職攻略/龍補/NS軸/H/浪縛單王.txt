@@ -1,10 +1,10 @@
 EncounterID:3379;Name:二團 浪縛 H 1王 Nymrissa Wavecaller;Difficulty:Heroic
-time:25;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:47;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:126;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:154;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:240;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:265;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:267;ph:1;tag:黛芙妮絲;spellid:363534;text:時光倒轉;TTS:true;dur:3;
-time:350;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:374;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:25;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:47;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:126;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:154;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:240;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:265;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:267;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:350;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:374;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;

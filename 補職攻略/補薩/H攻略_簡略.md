@@ -1,7 +1,7 @@
 # 補薩 H攻略（簡略）
 
-適用角色：H3 起本團 `血薩靈`；H1–H2 分團版本另看整團軸。
-版本：12.1。時間均為開怪後秒數；H3–H6 已納入本團五補軸，收到本團紀錄後再校正。
+適用範圍：通用補薩攻略，可供第三團 `小印` 與其他補薩使用；實際團隊分工另看整團 NS 軸。
+版本：12.1。時間均為開怪後秒數；目前完成至 H7，H8 待補。
 
 ## 30 秒速查
 
@@ -14,7 +14,7 @@
 | H4 | 暗盾交給補聖與神牧一起顧；補薩維持團血。 | `00:40`、`01:40`、`03:42`、`04:47`、`06:47` |
 | H5 | 顧同時帶致殘劈砍與毒素湧流的人。 | `00:42`、`01:00`、`03:48`、`04:15`、`06:49` |
 | H6 | 找高層永恆毒液＋有毒氣體、又將吃盛宴的人，先補滿。 | `00:43–01:06`、`03:43–04:15`、`06:47`、`07:53` |
-| H7 | 待補 | — |
+| H7 | P1 用卓越術接第一段連續毒液；進暗階段用靈魂連結，後段毒暗重疊再開卓越術與第二次靈魂連結。 | `00:26`、`02:26`、`03:47`、`07:43`、`08:19` |
 | H8 | 待補 | — |
 
 查詢方式：先看本表找到王，再進該王看「處理什麼」與「要盯」。秒數漂移時以同一個王技能波次為準，不為了準時而把招放空。
@@ -127,9 +127,19 @@ Google 指定軸：[WCL `3AGyf4Ya7BLvZtPH` fight 59](https://tw.warcraftlogs.com
 
 腐蝕球重複命中是機制問題；中球者帶高層毒傷時立刻單補並要求個減。最後 `08:07` 血雨不保資源。
 
-## H7
+## H7 The Coiled Altar
 
-待補。
+一句話重點：P1 先用卓越術接連續毒液脈衝；P2 的幽暗炸彈／墓縛以單補與短招處理，只有團隊確實集合時才放靈魂連結；P3 毒液爆裂與墓縛重疊時，優先維持點名者安全血線。
+
+| 時間 | 排定技能 | 處理什麼 |
+| ---: | --- | --- |
+| 00:26 | 卓越術 | P1 第一段聚合毒液接毒液爆裂。 |
+| 02:26 | 靈魂連結圖騰 | 進入暗階段後的第一段高額團傷。 |
+| 03:47 | 卓越術 | P2 後段連續團傷與幽暗炸彈／墓縛窗口。 |
+| 07:43 | 卓越術 | P3 後段毒液爆裂與墓縛連續重疊。 |
+| 08:19 | 靈魂連結圖騰 | 擊殺前最後一長段毒暗重疊；不再保招。 |
+
+要盯 **斬擊（`1299684`）**、**幽暗炸彈（`1310883`）** 與 **墓縛（`1297906`／`1308330`）** 目標。單一點名先用激流與快速單補；與毒液脈衝同時出現時才升級個減、外部或主要補招。
 
 ## H8
 
@@ -140,7 +150,7 @@ Google 指定軸：[WCL `3AGyf4Ya7BLvZtPH` fight 59](https://tw.warcraftlogs.com
 正文採固定三層框架，不以單一攻略或單一高 HPS 玩家直接下結論：
 
 1. **社群攻略定義機制與正常應對**：以 [Raidstrats H1](https://raidstrats.gg/guides/nek-zali-the-soulcoiler/heroic)、[H2](https://raidstrats.gg/guides/entombed-sentinels/heroic)、[H3](https://raidstrats.gg/guides/the-lost-explorers/heroic)、[H4](https://raidstrats.gg/guides/vashnik-the-malignant/heroic)、[H5](https://raidstrats.gg/guides/sszorak/heroic)、[H6](https://raidstrats.gg/guides/the-twin-fangs/heroic)，再與 [NGA 分享的 KDocs 摘要](../cooldown_plans/venomous_abyss_kdocs_guide_reference.md)交叉。
-2. **WCL 定義實際波次、戰術與開招**：H3 使用 [指定 6:45 擊殺](https://tw.warcraftlogs.com/reports/gaWNXzLDjb7n6v1T?fight=47&type=summary)，H4 使用 [指定祭壇戰術](https://www.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary)，H5 使用 [指定 7:08 擊殺](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary)，H6 使用 [專精完全相同五補場](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary)。
-3. **本團草案決定血薩靈要做什麼**：H3–H6 依本團五補軸錯開。收到本團紀錄後，以同戰術技能 occurrence 校時，不直接搬別團秒數。
+2. **WCL 定義實際波次、戰術與開招**：H3–H5 沿用指定團隊 WCL；H6 使用 [專精完全相同五補場](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary)；H7 使用 [Ravèñ 8:47 五補擊殺](https://www.warcraftlogs.com/reports/fCZNKw2dBkMQVt6R?fight=50&type=casts&source=243)。
+3. **通用草案決定補薩要做什麼**：保留 observed 使用次數與技能波次，再依實際團隊其他補招解決碰撞；不把通用個人版冒充成特定團隊 final。
 
-資料狀態：H1–H2 為社群機制加近似配置 WCL 草案；H3–H5 已有指定戰術 WCL；H6 為近兩週精確五補 WCL observed 骨架，映射成本團後仍是 draft。
+資料狀態：H1–H2 為社群機制加近似配置 WCL 草案；H3–H5 已有指定戰術 WCL；H6–H7 為近兩週精確五補 WCL observed 骨架；H8 待補。
