@@ -6,16 +6,16 @@
 
 ## 英雄難度
 
-| 首領 | 狀態 | 時間軸 |
-| --- | --- | --- |
-| 劇毒 1 王 | 待整理 | — |
-| 劇毒 2 王 | 待整理 | — |
-| 劇毒 3 王 | 待整理 | — |
-| 劇毒 4 王 | 可用 | [H4 時間軸](H/劇毒4王.md) |
-| 劇毒 5 王 | 可用 | [H5 時間軸](H/劇毒5王.md) |
-| 劇毒 6 王 | 草案 | [H6 時間軸](H/劇毒6王.md) |
-| 劇毒 7 王 | 草案 | [H7 時間軸](H/劇毒7王.md) |
-| 劇毒 8 王 | 待補 | — |
+| 首領 | 狀態 | 時間軸 | 參考 WCL |
+| --- | --- | --- | --- |
+| 劇毒 1 王 | 待整理 | — | — |
+| 劇毒 2 王 | 待整理 | — | — |
+| 劇毒 3 王 | 待整理 | — | — |
+| 劇毒 4 王 | 可用 | [H4 時間軸](H/劇毒4王.md) | [fight 35](https://tw.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary) |
+| 劇毒 5 王 | 可用 | [H5 時間軸](H/劇毒5王.md) | [fight 59](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary) |
+| 劇毒 6 王 | 草案 | [H6 時間軸](H/劇毒6王.md) | [fight 18](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary) |
+| 劇毒 7 王 | 草案 | [H7 時間軸](H/劇毒7王.md) | [fight 50](https://www.warcraftlogs.com/reports/fCZNKw2dBkMQVt6R?fight=50&type=summary) |
+| 劇毒 8 王 | 待補 | — | — |
 
 ## 傳奇難度
 
