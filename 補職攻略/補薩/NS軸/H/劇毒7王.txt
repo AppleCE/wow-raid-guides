@@ -2,5 +2,5 @@ EncounterID:3429;Name:劇毒 H 7王 The Coiled Altar;Difficulty:Heroic
 time:26;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
 time:146;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
 time:227;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
-time:463;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:443;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
 time:499;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
