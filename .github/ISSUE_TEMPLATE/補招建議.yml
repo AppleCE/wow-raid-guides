@@ -1,0 +1,68 @@
+name: 補招與 NS 軸建議
+description: 建議調整補招、團減、個減、外部防禦或 NS 提醒
+title: "[補招建議] "
+labels:
+  - 補招建議
+body:
+  - type: dropdown
+    id: boss
+    attributes:
+      label: 首領
+      options:
+        - 浪縛單王 Nymrissa
+        - 劇毒 1 王 Nek'zali
+        - 劇毒 2 王 Entombed Sentinels
+        - 劇毒 3 王 The Lost Explorers
+        - 劇毒 4 王 Vashnik
+        - 劇毒 5 王 Sszorak
+        - 劇毒 6 王 The Twin Fangs
+        - 劇毒 7 王
+        - 劇毒 8 王
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: 難度
+      options:
+        - H
+        - M
+    validations:
+      required: true
+  - type: input
+    id: healer
+    attributes:
+      label: 補職／角色
+      placeholder: 例如：神牧 呆小鄭
+    validations:
+      required: true
+  - type: input
+    id: timing
+    attributes:
+      label: 時間點／技能波次
+      placeholder: 例如：03:18 三連分攤 #1
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 目前排法
+      description: 可貼目前的 NS 列或簡述現有分配。
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建議排法與原因
+      description: 請說明要換成哪個技能、交給誰，以及要覆蓋什麼傷害。
+    validations:
+      required: true
+  - type: input
+    id: wcl
+    attributes:
+      label: WCL
+      placeholder: 建議附 report、fight 與 source
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他補充

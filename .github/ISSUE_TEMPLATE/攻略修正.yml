@@ -1,0 +1,63 @@
+name: 攻略內容修正
+description: 回報技能、時間軸、治療責任或文字說明需要修改
+title: "[攻略修正] "
+labels:
+  - 攻略修正
+body:
+  - type: dropdown
+    id: boss
+    attributes:
+      label: 首領
+      options:
+        - 浪縛單王 Nymrissa
+        - 劇毒 1 王 Nek'zali
+        - 劇毒 2 王 Entombed Sentinels
+        - 劇毒 3 王 The Lost Explorers
+        - 劇毒 4 王 Vashnik
+        - 劇毒 5 王 Sszorak
+        - 劇毒 6 王 The Twin Fangs
+        - 劇毒 7 王
+        - 劇毒 8 王
+        - 共通內容
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: 難度
+      options:
+        - H
+        - M
+        - 共通
+    validations:
+      required: true
+  - type: input
+    id: guide
+    attributes:
+      label: 攻略或補職
+      placeholder: 例如：龍補簡略版、H4 治療模型
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 目前內容
+      description: 貼出需要修改的句子或段落。
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建議修改
+      description: 說明正確內容與修改原因。
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: WCL／攻略來源
+      placeholder: 可貼 WCL、攻略文章或影片時間點
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他補充
