@@ -11,9 +11,11 @@
 | H1 | 精華撕裂目標出圈前先補穩；小怪進井不是治療缺口。 | `01:10`、`01:43`、`06:10`、`06:16` |
 | H2 | 紅側分攤後找黏附黑暗與等待驅散者；不要隔場追血。 | `01:16`、`03:53`、`04:35` |
 | H3 | 踩箱高層與未清霜火齊射的人優先；元素踩錯不追補。 | `03:08`、`03:50`、`06:27` |
-| H4 | 看冥魄／吸取感染與負責暗盾的神牧；主責不能施法才接手。 | `00:40`、`01:40`、`03:42`、`04:47`、`06:47` |
+| H4 | 暗盾交給補聖與神牧一起顧；補薩維持團血。 | `00:40`、`01:40`、`03:42`、`04:47`、`06:47` |
 | H5 | 雙 debuff 目標對撞前先補穩；撞球與摔落不追補。 | `00:42`、`01:00`、`03:48`、`04:15`、`06:49` |
 | H6 | 找高層永恆毒液＋有毒氣體、又將吃盛宴的人，先補滿。 | `00:53`、`02:13`、`03:55`、`06:44`、`07:06` |
+| H7 | 待補 | — |
+| H8 | 待補 | — |
 
 查詢方式：先看本表找到王，再進該王看「處理什麼」與「要盯」。秒數漂移時以同一個王技能波次為準，不為了準時而把招放空。
 
@@ -22,7 +24,7 @@
 - `卓越術` 要提早開，讓完整持續時間覆蓋連續團傷，不等全團殘血才按。
 - `靈魂連結圖騰` 只在隊伍確實集合時有效；分邊、分散或移動出去時，時間到了也不要原地空放。
 - 團隊分散時，優先盯帶兩個 debuff、分攤後低血、或正在離開治療射程的人。
-- 單點治療吸收不是補薩主要責任。補聖／神牧優先，補僧／補德接手；補薩主要維持團血並在主責補師失去施法條件時救急。
+- H4 暗盾交給補聖與神牧一起顧；補薩維持其他人的團血。
 
 ## 浪縛單王 Nymrissa Wavecaller
 
@@ -78,7 +80,7 @@ Google 指定軸：[WCL `gaWNXzLDjb7n6v1T` fight 47](https://tw.warcraftlogs.com
 
 ## H4 Vashnik the Malignant
 
-一句話重點：**冥魄感染（debuff `1294994`）** 由神牧主看，你要盯主責是否被點、出射程或被迫移動；只有主責失去施法條件才接手。帶 **吸取感染（debuff `1295224`）** 的人若又要進下一輪火怪爆炸，提前補滿並提醒個減。
+一句話重點：暗盾交給補聖與神牧一起顧；補薩維持其他人的團血。帶 **吸取感染（debuff `1295224`）** 的人若又要進下一輪火怪爆炸，提前補滿並提醒個減。
 
 祭壇順序：`血+暗 → 暗+火 → 血+火 → 暗+火 → 血+暗 → 暗+火`。
 
@@ -90,7 +92,7 @@ Google 指定軸：[WCL `gaWNXzLDjb7n6v1T` fight 47](https://tw.warcraftlogs.com
 | 04:47 | 靈魂連結圖騰 | 第四輪火怪／分攤重疊；確認不是正在大幅移位。 |
 | 06:47 | 卓越術 | 第六輪暗火預備，覆蓋最後火怪與高背景傷害。 |
 
-原草案 `07:12` 的第三次靈魂連結與前一次只差 145 秒，且同秒已有 DK 罩；本次驗收先刪除，不列成可用技能。要盯 **冥魄感染（`1294994`）**、**吸取感染（debuff `1295224`）**、火怪死亡前後全團血線，以及暗盾主責補師是否被點或出射程。暗盾本身不由補薩常規主責。
+原草案 `07:12` 的第三次靈魂連結與前一次只差 145 秒，且同秒已有 DK 罩；本次驗收先刪除，不列成可用技能。要盯 **吸取感染（debuff `1295224`）** 與火怪死亡前後全團血線；暗盾交給補聖與神牧一起顧。
 
 ## H5 Sszorak
 
@@ -124,11 +126,19 @@ Google 指定軸：[WCL `3AGyf4Ya7BLvZtPH` fight 59](https://tw.warcraftlogs.com
 
 最高危窗口是 `02:33 血雨 #1`、`05:25 血雨 #2`、`08:07 血雨 #3`。若團隊減傷沒有覆蓋，療癒之潮或其他主團補優先放血雨；不要為單純背景毒傷提前浪費。腐蝕球重複命中是機制問題，但中球者帶高層毒傷時要立刻單補並要求個減。
 
+## H7
+
+待補。
+
+## H8
+
+待補。
+
 ## 來源與可信度
 
 正文採固定三層框架，不以單一攻略或單一高 HPS 玩家直接下結論：
 
-1. **社群攻略定義機制與正常應對**：以 [Raidstrats H1](https://raidstrats.gg/guides/nek-zali-the-soulcoiler/heroic)、[H2](https://raidstrats.gg/guides/entombed-sentinels/heroic)、[H3](https://raidstrats.gg/guides/the-lost-explorers/heroic)、[H4](https://raidstrats.gg/guides/vashnik-the-malignant/heroic)、[H5](https://raidstrats.gg/guides/sszorak/heroic)、[H6](https://raidstrats.gg/guides/the-twin-fangs/heroic)，再與團隊保存的 NGA／KDocs 摘要交叉。
+1. **社群攻略定義機制與正常應對**：以 [Raidstrats H1](https://raidstrats.gg/guides/nek-zali-the-soulcoiler/heroic)、[H2](https://raidstrats.gg/guides/entombed-sentinels/heroic)、[H3](https://raidstrats.gg/guides/the-lost-explorers/heroic)、[H4](https://raidstrats.gg/guides/vashnik-the-malignant/heroic)、[H5](https://raidstrats.gg/guides/sszorak/heroic)、[H6](https://raidstrats.gg/guides/the-twin-fangs/heroic)，再與 [NGA 分享的 KDocs 摘要](../cooldown_plans/venomous_abyss_kdocs_guide_reference.md)交叉。
 2. **WCL 定義實際波次、戰術與開招**：H3 使用 [指定 6:45 擊殺](https://tw.warcraftlogs.com/reports/gaWNXzLDjb7n6v1T?fight=47&type=summary)，H4 使用 [指定祭壇戰術](https://www.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary)，H5 使用 [指定 7:08 擊殺](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary)，H6 使用 [補薩樣本](https://www.warcraftlogs.com/reports/R3pZkV98zhJyaHNw?fight=14&type=casts)。
 3. **本團草案決定 Arissa 要做什麼**：H1–H5 依二團現有補軸錯開；H6 尚無本團 WCL，所以明標「週末暫定」。收到本團紀錄後，以同戰術技能 occurrence 校時，不直接搬別團秒數。
 
