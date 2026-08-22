@@ -1,7 +1,7 @@
 # 補薩 H攻略（簡略）
 
 適用角色：H3 起本團 `血薩靈`；H1–H2 分團版本另看整團軸。
-版本：12.1。時間均為開怪後秒數；H3–H5 已納入本團五補軸，H6 依英雄 WCL 樣本暫定，收到本團紀錄後再校正。
+版本：12.1。時間均為開怪後秒數；H3–H6 已納入本團五補軸，收到本團紀錄後再校正。
 
 ## 30 秒速查
 
@@ -13,7 +13,7 @@
 | H3 | 踩箱高層與未清霜火齊射的人優先；元素踩錯不追補。 | `03:08`、`03:50`、`06:27` |
 | H4 | 暗盾交給補聖與神牧一起顧；補薩維持團血。 | `00:40`、`01:40`、`03:42`、`04:47`、`06:47` |
 | H5 | 顧同時帶致殘劈砍與毒素湧流的人。 | `00:42`、`01:00`、`03:48`、`04:15`、`06:49` |
-| H6 | 找高層永恆毒液＋有毒氣體、又將吃盛宴的人，先補滿。 | `00:53`、`02:13`、`03:55`、`06:44`、`07:06` |
+| H6 | 找高層永恆毒液＋有毒氣體、又將吃盛宴的人，先補滿。 | `00:43–01:06`、`03:43–04:15`、`06:47`、`07:53` |
 | H7 | 待補 | — |
 | H8 | 待補 | — |
 
@@ -110,21 +110,22 @@ Google 指定軸：[WCL `3AGyf4Ya7BLvZtPH` fight 59](https://tw.warcraftlogs.com
 
 要盯：同時帶 **致殘劈砍（`1285998`）＋毒素湧流（`1306120`／`1312156`）**、吃到風暴、或對撞時離開治療射程者。靈魂連結不是拿來處理摔落；正常橫風團傷才是補師責任。
 
-## H6 The Twin Fangs（週末暫定）
+## H6 The Twin Fangs
 
 一句話重點：優先找同時帶高層 **永恆毒液（debuff `1290480`）＋有毒氣體（debuff `1294976`）**、又即將吃盛宴的人，先補滿再處理腐蝕球；重複中球先判機制，只有正常高毒層進盛宴才升級成外部／個減。
 
-英雄 Top 補薩樣本 `Katieey` 的實際主要技能為：卓越術 `00:53／03:55／07:06`，靈魂連結 `02:13／06:44`。以下依 8:10 機制模型解讀：
+本團五補草案採專精完全相同的 8:22 過王骨架：
 
 | 時間 | 技能 | 機制錨點 |
 | ---: | --- | --- |
-| 00:53 | 卓越術 | 00:52 攪動深淵，延續到 01:08 貪噬盛宴。 |
-| 02:13 | 靈魂連結圖騰 | 02:15 貪噬盛宴 #2；盛宴前先把團血補滿。 |
-| 03:55 | 卓越術 | 03:57 貪噬盛宴 #3，之後接 04:12 腐蝕球。 |
-| 06:44 | 靈魂連結圖騰 | 06:47 貪噬盛宴 #5；後段毒性底傷較高。 |
-| 07:06 | 卓越術 | 後段接力與擊殺前資源；若本團時間較慢，延後覆蓋 07:39→07:54 最後盛宴鏈。 |
+| 00:43 | 卓越術 | 第一輪放水與攪動深淵。 |
+| 01:06 | 靈魂連結圖騰 | 第一輪貪噬盛宴。 |
+| 03:43 | 卓越術 | 第三輪攪動深淵與盛宴。 |
+| 04:15 | 靈魂連結圖騰 | 第三輪後腐蝕球回穩；放在團隊集合點。 |
+| 06:47 | 卓越術 | 第五輪貪噬盛宴與後續回穩。 |
+| 07:53 | 靈魂連結圖騰 | 第六輪盛宴；其他資源接最後血雨。 |
 
-最高危窗口是 `02:33 血雨 #1`、`05:25 血雨 #2`、`08:07 血雨 #3`。若團隊減傷沒有覆蓋，療癒之潮或其他主團補優先放血雨；不要為單純背景毒傷提前浪費。腐蝕球重複命中是機制問題，但中球者帶高層毒傷時要立刻單補並要求個減。
+腐蝕球重複命中是機制問題；中球者帶高層毒傷時立刻單補並要求個減。最後 `08:07` 血雨不保資源。
 
 ## H7
 
@@ -139,7 +140,7 @@ Google 指定軸：[WCL `3AGyf4Ya7BLvZtPH` fight 59](https://tw.warcraftlogs.com
 正文採固定三層框架，不以單一攻略或單一高 HPS 玩家直接下結論：
 
 1. **社群攻略定義機制與正常應對**：以 [Raidstrats H1](https://raidstrats.gg/guides/nek-zali-the-soulcoiler/heroic)、[H2](https://raidstrats.gg/guides/entombed-sentinels/heroic)、[H3](https://raidstrats.gg/guides/the-lost-explorers/heroic)、[H4](https://raidstrats.gg/guides/vashnik-the-malignant/heroic)、[H5](https://raidstrats.gg/guides/sszorak/heroic)、[H6](https://raidstrats.gg/guides/the-twin-fangs/heroic)，再與 [NGA 分享的 KDocs 摘要](../cooldown_plans/venomous_abyss_kdocs_guide_reference.md)交叉。
-2. **WCL 定義實際波次、戰術與開招**：H3 使用 [指定 6:45 擊殺](https://tw.warcraftlogs.com/reports/gaWNXzLDjb7n6v1T?fight=47&type=summary)，H4 使用 [指定祭壇戰術](https://www.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary)，H5 使用 [指定 7:08 擊殺](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary)，H6 使用 [補薩樣本](https://www.warcraftlogs.com/reports/R3pZkV98zhJyaHNw?fight=14&type=casts)。
-3. **本團草案決定 Arissa 要做什麼**：H1–H5 依二團現有補軸錯開；H6 尚無本團 WCL，所以明標「週末暫定」。收到本團紀錄後，以同戰術技能 occurrence 校時，不直接搬別團秒數。
+2. **WCL 定義實際波次、戰術與開招**：H3 使用 [指定 6:45 擊殺](https://tw.warcraftlogs.com/reports/gaWNXzLDjb7n6v1T?fight=47&type=summary)，H4 使用 [指定祭壇戰術](https://www.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary)，H5 使用 [指定 7:08 擊殺](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary)，H6 使用 [專精完全相同五補場](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary)。
+3. **本團草案決定血薩靈要做什麼**：H3–H6 依本團五補軸錯開。收到本團紀錄後，以同戰術技能 occurrence 校時，不直接搬別團秒數。
 
-資料狀態：H1–H2 為社群機制加近似配置 WCL 草案；H3–H5 已有指定戰術 WCL；H6 為近兩週英雄 WCL observed，待本團紀錄定稿。
+資料狀態：H1–H2 為社群機制加近似配置 WCL 草案；H3–H5 已有指定戰術 WCL；H6 為近兩週精確五補 WCL observed 骨架，映射成本團後仍是 draft。

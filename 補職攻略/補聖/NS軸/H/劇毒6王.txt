@@ -1,0 +1,6 @@
+EncounterID:3421;Name:本團 劇毒 H 6王 The Twin Fangs;Difficulty:Heroic
+time:53;ph:1;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
+time:118;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
+time:263;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
+time:290;ph:1;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
+time:386;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;

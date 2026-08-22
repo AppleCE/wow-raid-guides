@@ -1,0 +1,7 @@
+EncounterID:3421;Name:本團 劇毒 H 6王 The Twin Fangs;Difficulty:Heroic
+time:43;ph:1;tag:血薩靈;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:66;ph:1;tag:血薩靈;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
+time:223;ph:1;tag:血薩靈;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:255;ph:1;tag:血薩靈;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
+time:407;ph:1;tag:血薩靈;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:473;ph:1;tag:血薩靈;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
