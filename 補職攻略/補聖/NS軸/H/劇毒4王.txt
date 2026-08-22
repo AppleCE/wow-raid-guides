@@ -1,0 +1,14 @@
+EncounterID:3455;Name:一團 劇毒 H 4王 Vashnik the Malignant;Difficulty:Heroic
+time:15;ph:1;tag:血聖靈;spellid:31884;text:第一輪血暗;TTS:true;dur:3;
+time:46;ph:1;tag:Arielle;spellid:31884;text:第一輪感染;TTS:true;dur:3;
+time:92;ph:1;tag:Arielle;spellid:31821;text:第二輪暗火預備;TTS:true;dur:3;
+time:140;ph:1;tag:血聖靈;spellid:31884;text:第二輪火怪後半;TTS:true;dur:3;
+time:174;ph:1;tag:Arielle;spellid:31884;text:第三輪血火預備;TTS:true;dur:3;
+time:183;ph:1;tag:血聖靈;spellid:31821;text:第三輪血火;TTS:true;dur:3;
+time:279;ph:1;tag:血聖靈;spellid:31884;text:第四輪暗火;TTS:true;dur:3;
+time:282;ph:1;tag:Arielle;spellid:31821;text:第四輪暗火;TTS:true;dur:3;
+time:299;ph:1;tag:Arielle;spellid:31884;text:第四輪火怪死亡;TTS:true;dur:3;
+time:385;ph:1;tag:血聖靈;spellid:31821;text:第五輪感染;TTS:true;dur:3;
+time:400;ph:1;tag:血聖靈;spellid:31884;text:第五輪後半;TTS:true;dur:3;
+time:427;ph:1;tag:Arielle;spellid:31884;text:第六輪暗火;TTS:true;dur:3;
+time:468;ph:1;tag:Arielle;spellid:31821;text:第六輪收尾;TTS:true;dur:3;

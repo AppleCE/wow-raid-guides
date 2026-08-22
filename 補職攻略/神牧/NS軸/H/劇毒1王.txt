@@ -1,0 +1,14 @@
+EncounterID:3470;Name:二團 劇毒 H 1王 Nek'zali the Soulcoiler;Difficulty:Heroic
+time:5;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:36;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
+time:68;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:133;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:188;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
+time:195;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
+time:223;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:288;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:323;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
+time:352;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:417;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:477;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:519;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
