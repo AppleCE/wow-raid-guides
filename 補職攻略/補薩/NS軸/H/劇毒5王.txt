@@ -1,0 +1,6 @@
+EncounterID:3420;Name:二團 劇毒 H 5王 Sszorak;Difficulty:Heroic
+time:42;ph:1;tag:Arissa;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:60;ph:1;tag:Arissa;spellid:98008;text:靈魂連結;TTS:true;dur:3;
+time:228;ph:1;tag:Arissa;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:255;ph:1;tag:Arissa;spellid:98008;text:靈魂連結;TTS:true;dur:3;
+time:409;ph:1;tag:Arissa;spellid:114052;text:卓越術;TTS:true;dur:3;

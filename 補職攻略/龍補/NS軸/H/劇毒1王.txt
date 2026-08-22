@@ -1,0 +1,10 @@
+EncounterID:3470;Name:二團 劇毒 H 1王 Nek'zali the Soulcoiler;Difficulty:Heroic
+time:50;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:75;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:138;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:154;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:245;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:264;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:358;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:379;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:458;ph:1;tag:黛芙妮絲;spellid:363534;text:時光倒轉;TTS:true;dur:3;

@@ -1,7 +1,7 @@
-# 黛芙妮絲 H 攻略：浪縛單王＋劇毒 H1–H6
+# 龍補 H攻略
 
 適用角色：二團 `黛芙妮絲`。  
-版本：12.1。時間均為開怪後秒數；浪縛單王與劇毒 H1–H4 依現有二團補軸，劇毒 H5–H6 待補。
+版本：12.1。時間均為開怪後秒數；目前浪縛單王與劇毒 H1–H4 已完成，劇毒 H5–H6 待補，後續會接續寫入本文件。
 
 ## 30 秒速查
 
@@ -118,7 +118,7 @@ Google 指定軸：[WCL `gaWNXzLDjb7n6v1T` fight 47](https://tw.warcraftlogs.com
 
 正文採固定三層框架，不以單一攻略或單一高 HPS 玩家直接下結論：
 
-1. **社群攻略定義機制與正常應對**：浪縛單王參考 [Icy Veins](https://www.icy-veins.com/wow/midnight-world-bosses-guide) 與 [SkyCoach](https://skycoach.gg/blog/wow/articles/nymrissa-wavecaller-lair-boss-guide)；劇毒 H1–H4 以 [Raidstrats H1](https://raidstrats.gg/guides/nek-zali-the-soulcoiler/heroic)、[H2](https://raidstrats.gg/guides/entombed-sentinels/heroic)、[H3](https://raidstrats.gg/guides/the-lost-explorers/heroic)、[H4](https://raidstrats.gg/guides/vashnik-the-malignant/heroic)，再與 [NGA 分享的 KDocs 摘要](../cooldown_plans/venomous_abyss_kdocs_guide_reference.md)交叉。
+1. **社群攻略定義機制與正常應對**：浪縛單王參考 [Icy Veins](https://www.icy-veins.com/wow/midnight-world-bosses-guide) 與 [SkyCoach](https://skycoach.gg/blog/wow/articles/nymrissa-wavecaller-lair-boss-guide)；劇毒 H1–H4 以 [Raidstrats H1](https://raidstrats.gg/guides/nek-zali-the-soulcoiler/heroic)、[H2](https://raidstrats.gg/guides/entombed-sentinels/heroic)、[H3](https://raidstrats.gg/guides/the-lost-explorers/heroic)、[H4](https://raidstrats.gg/guides/vashnik-the-malignant/heroic)，再與團隊保存的 NGA／KDocs 摘要交叉。
 2. **WCL 定義實際波次、戰術與開招**：浪縛單王依二團補軸；H3 使用 [指定 6:45 擊殺](https://tw.warcraftlogs.com/reports/gaWNXzLDjb7n6v1T?fight=47&type=summary)同場龍補；H4 使用 [指定祭壇戰術](https://www.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary)。
 3. **本團草案決定黛芙妮絲要做什麼**：浪縛單王與劇毒 H1–H4 依二團現有補軸錯開。收到本團紀錄後，以同戰術技能 occurrence 校時，不直接搬別團秒數。
 

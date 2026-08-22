@@ -1,0 +1,11 @@
+EncounterID:3379;Name:一團 浪縛 H 1王 Nymrissa Wavecaller;Difficulty:Heroic
+time:11;ph:1;tag:血聖靈;spellid:31884;text:第一輪雨;TTS:true;dur:3;
+time:12;ph:1;tag:Arielle;spellid:31884;text:第一輪雨;TTS:true;dur:3;
+time:92;ph:1;tag:Arielle;spellid:31821;text:第三輪雨;TTS:true;dur:3;
+time:149;ph:1;tag:血聖靈;spellid:31884;text:第四輪雨;TTS:true;dur:3;
+time:154;ph:1;tag:Arielle;spellid:31884;text:第四輪雨;TTS:true;dur:3;
+time:198;ph:1;tag:血聖靈;spellid:31821;text:第五輪雨;TTS:true;dur:3;
+time:292;ph:1;tag:血聖靈;spellid:31884;text:第七輪預鋪;TTS:true;dur:3;
+time:310;ph:1;tag:Arielle;spellid:31884;text:第七輪雨;TTS:true;dur:3;
+time:376;ph:1;tag:Arielle;spellid:31821;text:最後一輪雨;TTS:true;dur:3;
+time:381;ph:1;tag:血聖靈;spellid:31821;text:最後一輪雨;TTS:true;dur:3;

@@ -1,0 +1,15 @@
+EncounterID:3445;Name:一團 劇毒 H 2王 Entombed Sentinels;Difficulty:Heroic
+time:6;ph:1;tag:Arielle;spellid:31884;text:綠側第一隻大軟;TTS:true;dur:3;
+time:22;ph:1;tag:血聖靈;spellid:31884;text:紅側第一次分攤;TTS:true;dur:3;
+time:36;ph:1;tag:Arielle;spellid:31821;text:綠側第一輪後半;TTS:true;dur:3;
+time:43;ph:1;tag:血聖靈;spellid:31821;text:第一次轉階段;TTS:true;dur:3;
+time:143;ph:1;tag:血聖靈;spellid:31884;text:紅側第三次分攤;TTS:true;dur:3;
+time:179;ph:1;tag:Arielle;spellid:31884;text:綠側第四隻大軟;TTS:true;dur:3;
+time:223;ph:1;tag:血聖靈;spellid:31821;text:紅側第五次分攤;TTS:true;dur:3;
+time:235;ph:1;tag:Arielle;spellid:31821;text:綠側第五隻大軟;TTS:true;dur:3;
+time:266;ph:1;tag:血聖靈;spellid:31884;text:紅側第六次預鋪;TTS:true;dur:3;
+time:331;ph:1;tag:Arielle;spellid:31884;text:綠側第七隻大軟;TTS:true;dur:3;
+time:393;ph:1;tag:血聖靈;spellid:31884;text:紅側第八次分攤;TTS:true;dur:3;
+time:425;ph:1;tag:Arielle;spellid:31821;text:綠側第九隻大軟;TTS:true;dur:3;
+time:441;ph:1;tag:血聖靈;spellid:31821;text:紅側第九次分攤;TTS:true;dur:3;
+time:516;ph:1;tag:血聖靈;spellid:31884;text:紅側收尾;TTS:true;dur:3;

@@ -1,0 +1,7 @@
+EncounterID:3455;Name:二團 劇毒 H 4王 Vashnik the Malignant;Difficulty:Heroic
+time:40;ph:1;tag:Arissa;spellid:114052;text:第一輪感染;TTS:true;dur:3;
+time:100;ph:1;tag:Arissa;spellid:98008;text:第二輪暗火;TTS:true;dur:3;
+time:222;ph:1;tag:Arissa;spellid:114052;text:第三輪後半;TTS:true;dur:3;
+time:287;ph:1;tag:Arissa;spellid:98008;text:第四輪火怪;TTS:true;dur:3;
+time:407;ph:1;tag:Arissa;spellid:114052;text:第六輪暗火預備;TTS:true;dur:3;
+time:432;ph:1;tag:Arissa;spellid:98008;text:第六輪暗火;TTS:true;dur:3;
