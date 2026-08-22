@@ -1,0 +1,14 @@
+EncounterID:3421;Name:劇毒 H 6王 The Twin Fangs;Difficulty:Heroic
+time:41;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:46;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:55;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:136;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:141;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:222;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:225;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:229;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:314;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:319;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:396;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:412;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:427;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
