@@ -3,6 +3,7 @@ time:15;ph:1;tag:血聖靈;spellid:31884;text:復仇之怒;TTS:true;dur:3;
 time:39;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
 time:145;ph:1;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
 time:177;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
-time:192;ph:1;tag:血聖靈;spellid:31821;text:精通光環;TTS:true;dur:3;
+time:192;ph:1;tag:血聖靈;spellid:31884;text:復仇之怒;TTS:true;dur:3;
 time:260;ph:1;tag:血聖靈;spellid:31884;text:復仇之怒;TTS:true;dur:3;
+time:282;ph:1;tag:血聖靈;spellid:31821;text:精通光環;TTS:true;dur:3;
 time:302;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;

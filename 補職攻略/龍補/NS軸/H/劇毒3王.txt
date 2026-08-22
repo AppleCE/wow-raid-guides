@@ -1,10 +1,12 @@
 EncounterID:3497;Name:二團 劇毒 H 3王 The Lost Explorers;Difficulty:Heroic
 time:15;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:43;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:75;ph:1;tag:黛芙妮絲;spellid:363534;text:時光倒轉;TTS:true;dur:3;
-time:82;ph:1;tag:黛芙妮絲;spellid:374227;text:微風;TTS:true;dur:3;
-time:120;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:136;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:230;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:245;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:280;ph:1;tag:黛芙妮絲;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:49;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:115;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:146;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:197;ph:1;tag:黛芙妮絲;spellid:374227;text:輕風;TTS:true;dur:3;
+time:228;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:266;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:331;ph:1;tag:黛芙妮絲;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:343;ph:1;tag:黛芙妮絲;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
+time:375;ph:1;tag:黛芙妮絲;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
+time:388;ph:1;tag:黛芙妮絲;spellid:374227;text:輕風;TTS:true;dur:3;
