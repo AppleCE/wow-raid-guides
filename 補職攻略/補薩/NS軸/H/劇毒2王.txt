@@ -1,4 +1,4 @@
 EncounterID:3445;Name:二團 劇毒 H 2王 Entombed Sentinels;Difficulty:Heroic
 time:76;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
-time:233;ph:1;tag:補薩;spellid:98008;text:靈魂連結;TTS:true;dur:3;
-time:275;ph:1;tag:補薩;spellid:108280;text:療癒之潮;TTS:true;dur:3;
+time:233;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
+time:275;ph:1;tag:補薩;spellid:108280;text:療癒之潮圖騰;TTS:true;dur:3;

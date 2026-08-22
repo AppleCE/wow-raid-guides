@@ -1,16 +1,16 @@
 EncounterID:3455;Name:二團 劇毒 H 4王 Vashnik the Malignant;Difficulty:Heroic
-time:12;ph:1;tag:呆小鄭;spellid:200183;text:第一輪血暗;TTS:true;dur:3;
+time:12;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
 time:13;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:52;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
 time:80;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
-time:133;ph:1;tag:呆小鄭;spellid:200183;text:第二輪火怪;TTS:true;dur:3;
+time:133;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
 time:134;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
-time:196;ph:1;tag:呆小鄭;spellid:64843;text:第三輪火怪;TTS:true;dur:3;
+time:196;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
 time:204;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
-time:268;ph:1;tag:呆小鄭;spellid:200183;text:第四輪暗火;TTS:true;dur:3;
+time:268;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
 time:269;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
-time:318;ph:1;tag:呆小鄭;spellid:64843;text:第四輪後半;TTS:true;dur:3;
+time:318;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
 time:336;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:402;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
-time:450;ph:1;tag:呆小鄭;spellid:64843;text:第六輪火怪;TTS:true;dur:3;
+time:450;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
 time:465;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;

@@ -1,11 +1,11 @@
 EncounterID:3379;Name:二團 浪縛 H 1王 Nymrissa Wavecaller;Difficulty:Heroic
-time:12;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
-time:80;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:12;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
+time:80;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:89;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
-time:145;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:145;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:197;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
-time:210;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
-time:276;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
-time:342;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:210;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
+time:276;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
+time:342;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:376;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
-time:411;ph:1;tag:呆小鄭;spellid:120517;text:Halo;TTS:true;dur:3;
+time:411;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
