@@ -7,7 +7,7 @@ time:26;ph:1;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
 time:26;ph:1;tag:Raitoningu;spellid:114052;text:卓越術;TTS:true;dur:3;
 time:65;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
 time:66;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
-time:66;ph:1;tag:豆腐天尊;spellid:115310;text:還魂術;TTS:true;dur:3;
+time:66;ph:1;tag:豆腐天尊;spellid:115310;text:五氣歸元;TTS:true;dur:3;
 time:71;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:3;
 time:85;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:127;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
@@ -42,7 +42,6 @@ time:463;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;d
 time:493;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:496;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:3;
 time:499;ph:1;tag:Raitoningu;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
-time:502;ph:1;tag:Darksix;spellid:97462;text:振奮咆哮;TTS:true;dur:3;
 time:515;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
 time:519;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:3;
 time:520;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:3;
