@@ -13,5 +13,6 @@
 - [劇毒 3 王 The Lost Explorers](劇毒3王.txt)
 - [劇毒 4 王 Vashnik the Malignant](劇毒4王.txt)
 - [劇毒 5 王 Sszorak](劇毒5王.txt)
+- [劇毒 6 王 The Twin Fangs](劇毒6王.txt)
 
-H3–H5 以既有同戰術五補骨架重排：保留神牧、補僧與治療專精的錯開關係，將分身角色換成本尊，移除龍補，再補入 Arielle 的補聖軸。這是本團 `draft`，收到本團 WCL 後再校正。
+H3–H5 以既有同戰術五補骨架重排。H6 採近兩週專精完全相同的五補 8:22 過王骨架，將角色映射成本團；這些仍是 `draft`，收到本團 WCL 後再校正。

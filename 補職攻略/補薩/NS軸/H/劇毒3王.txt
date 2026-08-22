@@ -1,4 +1,4 @@
-EncounterID:3497;Name:二團 劇毒 H 3王 The Lost Explorers;Difficulty:Heroic
-time:188;ph:1;tag:Arissa;spellid:114052;text:第一組三連分攤;TTS:true;dur:3;
-time:230;ph:1;tag:Arissa;spellid:98008;text:第二組三連分攤;TTS:true;dur:3;
-time:388;ph:1;tag:Arissa;spellid:114052;text:最後Blink Nova;TTS:true;dur:3;
+EncounterID:3497;Name:本團 劇毒 H 3王 The Lost Explorers;Difficulty:Heroic
+time:188;ph:1;tag:血薩靈;spellid:114052;text:第一組三連分攤;TTS:true;dur:3;
+time:230;ph:1;tag:血薩靈;spellid:98008;text:第二組三連分攤;TTS:true;dur:3;
+time:388;ph:1;tag:血薩靈;spellid:114052;text:最後Blink Nova;TTS:true;dur:3;
