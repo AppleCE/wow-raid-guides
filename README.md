@@ -13,6 +13,10 @@
 
 完整首領範圍為浪縛單王與劇毒 H1–H8。目前攻略整理到劇毒 H6；劇毒 H7、H8 待補，完成後放回相同資料夾。
 
+## 整團 NS 軸
+
+- [整團 NS 軸](整團NS軸/README.md)：保存五補或六補的完整排招，與各補職底下的個人軸分開。
+
 ## 提供意見
 
 團員可以到 [Issues](https://github.com/AppleCE/wow-raid-guides/issues/new/choose) 選擇「攻略內容修正」或「補招與 NS 軸建議」。建議附上首領、難度、補職、時間點與 WCL，方便直接核對。
