@@ -1,4 +1,4 @@
-EncounterID:3420;Name:本團 劇毒 H 5王 Sszorak (6補);Difficulty:Heroic
+EncounterID:3420;Name:本團 劇毒 英雄 5王 司佐拉 六補預設;Difficulty:Heroic
 time:1;ph:1;text:驅毒採突發反應；多人中暴風才放清毒圖騰；可解毒職業支援;TTS:true;dur:6;
 time:5;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:5;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;

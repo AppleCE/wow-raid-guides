@@ -1,4 +1,4 @@
-EncounterID:3497;Name:本團 劇毒 H 3王 The Lost Explorers;Difficulty:Heroic
+EncounterID:3497;Name:本團 劇毒 英雄 3王 迷路的探險者 五補;Difficulty:Heroic
 time:1;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:9;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
 time:9;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:3;

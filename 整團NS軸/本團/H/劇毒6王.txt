@@ -1,4 +1,4 @@
-EncounterID:3421;Name:本團 劇毒 H 6王 The Twin Fangs;Difficulty:Heroic
+EncounterID:3421;Name:本團 劇毒 英雄 6王 雙生毒牙 五補;Difficulty:Heroic
 time:35;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:3;
 time:36;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:43;ph:1;tag:Raitoningu;spellid:114052;text:卓越術;TTS:true;dur:3;
