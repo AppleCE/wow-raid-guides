@@ -14,7 +14,7 @@
 | 劇毒 4 王 | 草案 | [H4（5補）](H/劇毒4王%285補%29.md) ・ [H4（6補）](H/劇毒4王%286補%29.md) | [fight 35](https://tw.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary) |
 | 劇毒 5 王 | 可用 | [H5（5補備案）](H/劇毒5王%285補%29.md) ・ [H5（6補預設）](H/劇毒5王%286補%29.md) | [fight 59](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary) |
 | 劇毒 6 王 | 六補草案 | [H6 時間軸](H/劇毒6王.md) | [fight 18](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary) |
-| 劇毒 7 王 | 六補草案 | [H7 時間軸](H/劇毒7王.md) | [fight 50](https://www.warcraftlogs.com/reports/fCZNKw2dBkMQVt6R?fight=50&type=summary) |
+| 劇毒 7 王 | 五／六補草案 | [H7（5補預設）](H/劇毒7王%285補%29.md) ・ [H7（6補追加）](H/劇毒7王%286補%29.md) | [指定 H 軸 fight 35](https://tw.warcraftlogs.com/reports/VQvzDYJ7Bjpqdm2H?fight=35&type=summary) |
 | 劇毒 8 王 | 待補 | — | — |
 
 ## 傳奇難度
@@ -27,7 +27,7 @@
 
 - RL 軸可同時放五補、戰士、DK、DH、個減與糖紅；首次核准後，才把治療部分產生為實戰 NS。
 - RL 軸標示 `draft` 時仍可能修改；不得把尚未核准的草稿自動覆蓋實戰 NS。
-- 後續實戰微調 NS 時，只同步整團 NS、個人 NS 與相關補師攻略；不需回寫這份 RL 審核軸。
+- 後續實戰微調 NS 時，同步整團 NS 與相關補師攻略；補薩、龍補另同步通用個人 NS，不需回寫這份 RL 審核軸。
 - `王的技能／傷害` 是這一格為什麼要用資源。
 - `本團補招` 是回復血量的技能；不等同防止秒殺。
 - `團減／個減` 才是大傷害前的生存安排。

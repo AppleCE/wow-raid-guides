@@ -1,9 +1,0 @@
-EncounterID:3429;Name:本團 劇毒 H 7王 The Coiled Altar;Difficulty:Heroic
-time:3;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
-time:26;ph:1;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
-time:132;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
-time:84;ph:2;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
-time:115;ph:2;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
-time:71;ph:3;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
-time:111;ph:3;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:3;
-time:198;ph:3;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
