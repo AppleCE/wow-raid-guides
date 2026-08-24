@@ -12,7 +12,7 @@
 | 劇毒 2 王 | 待整理 | — | — |
 | 劇毒 3 王 | 草案 | [H3 時間軸](H/劇毒3王.md) | [fight 47](https://tw.warcraftlogs.com/reports/gaWNXzLDjb7n6v1T?fight=47&type=summary) |
 | 劇毒 4 王 | 草案 | [H4（5補）](H/劇毒4王%285補%29.md) ・ [H4（6補）](H/劇毒4王%286補%29.md) | [fight 35](https://tw.warcraftlogs.com/reports/aNHzr2TcXKdVQZmP?fight=35&type=summary) |
-| 劇毒 5 王 | 可用 | [H5 時間軸](H/劇毒5王.md) | [fight 59](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary) |
+| 劇毒 5 王 | 可用 | [H5（5補備案）](H/劇毒5王%285補%29.md) ・ [H5（6補預設）](H/劇毒5王%286補%29.md) | [fight 59](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary) |
 | 劇毒 6 王 | 草案 | [H6 時間軸](H/劇毒6王.md) | [fight 18](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary) |
 | 劇毒 7 王 | 草案 | [H7 時間軸](H/劇毒7王.md) | [fight 50](https://www.warcraftlogs.com/reports/fCZNKw2dBkMQVt6R?fight=50&type=summary) |
 | 劇毒 8 王 | 待補 | — | — |

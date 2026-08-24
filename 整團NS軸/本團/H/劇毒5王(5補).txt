@@ -1,4 +1,4 @@
-EncounterID:3420;Name:本團 劇毒 H 5王 Sszorak (6補);Difficulty:Heroic
+EncounterID:3420;Name:本團 劇毒 H 5王 Sszorak (5補);Difficulty:Heroic
 time:1;ph:1;text:驅毒採突發反應；多人中暴風才放清毒圖騰；可解毒職業支援;TTS:true;dur:6;
 time:5;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:5;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
@@ -15,10 +15,8 @@ time:66;ph:1;tag:豆腐天尊;spellid:388615;text:歸元;TTS:true;dur:3;
 time:68;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
 time:85;ph:1;tag:菈菈跳來跳去;text:顧放球 1305963;TTS:true;dur:5;
 time:85;ph:1;tag:豆腐天尊;text:放球備援 1305963;TTS:true;dur:5;
-time:95;ph:1;tag:血薩靈;spellid:114052;text:卓越術;TTS:true;dur:3;
 time:97;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
 time:111;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:3;
-time:122;ph:1;tag:血薩靈;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
 time:126;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:3;
 time:127;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:3;
 time:130;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:3;
@@ -43,13 +41,11 @@ time:280;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:3;
 time:304;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:3;
 time:309;ph:1;tag:菈菈跳來跳去;text:顧放球 1305963;TTS:true;dur:5;
 time:309;ph:1;tag:豆腐天尊;text:放球備援 1305963;TTS:true;dur:5;
-time:312;ph:1;tag:血薩靈;spellid:114052;text:卓越術;TTS:true;dur:3;
 time:322;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
 time:329;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:3;
 time:361;ph:1;tag:菈菈跳來跳去;text:顧放球 1305963;TTS:true;dur:5;
 time:361;ph:1;tag:豆腐天尊;text:放球備援 1305963;TTS:true;dur:5;
 time:384;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:3;
 time:387;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:3;
-time:391;ph:1;tag:血薩靈;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
 time:393;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:3;
 time:409;ph:1;tag:Raitoningu;spellid:114052;text:卓越術;TTS:true;dur:3;
