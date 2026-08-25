@@ -66,12 +66,14 @@
 /console raidGraphicsViewDistance 3
 /console raidGraphicsEnvironmentDetail 0
 /console raidGraphicsGroundClutter 0
-/console ResampleAlwaysSharpen 1
 ```
 
-選用：關閉音效殘響。
+以上 `raidGraphics*` 只修改團本／戰場專用設定，不會更動野外使用的 `graphics*` 設定。
+
+下列是選用的全域設定，野外也會生效：
 
 ```text
+/console ResampleAlwaysSharpen 1
 /console Sound_EnableReverb 0
 ```
 
