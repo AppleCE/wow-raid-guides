@@ -1,5 +1,5 @@
 EncounterID:3379;Name:二團 浪縛 H 1王 Nymrissa Wavecaller;Difficulty:Heroic
-time:49;ph:1;tag:補薩;spellid:108280;text:療癒之潮圖騰;TTS:true;dur:3;
-time:157;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
-time:307;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
-time:417;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
+time:49;ph:1;tag:補薩;spellid:108280;text:療癒之潮圖騰;TTS:true;dur:5;
+time:157;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
+time:307;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
+time:417;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;

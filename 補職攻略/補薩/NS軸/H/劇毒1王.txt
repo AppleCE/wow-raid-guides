@@ -1,5 +1,5 @@
 EncounterID:3470;Name:二團 劇毒 H 1王 Nek'zali the Soulcoiler;Difficulty:Heroic
-time:70;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
-time:103;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
-time:370;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
-time:376;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:70;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
+time:103;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
+time:370;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
+time:376;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;

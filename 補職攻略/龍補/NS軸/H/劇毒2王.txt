@@ -1,7 +1,7 @@
 EncounterID:3445;Name:二團 劇毒 H 2王 Entombed Sentinels;Difficulty:Heroic
-time:55;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:80;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:105;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:3;
-time:225;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:3;
-time:251;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:3;
-time:402;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:3;
+time:55;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:80;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:105;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+time:225;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:251;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:402;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;

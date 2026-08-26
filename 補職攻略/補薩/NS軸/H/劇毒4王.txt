@@ -1,6 +1,6 @@
 EncounterID:3455;Name:本團 劇毒 H 4王 Vashnik the Malignant;Difficulty:Heroic
-time:40;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
-time:100;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
-time:222;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
-time:287;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:3;
-time:407;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:3;
+time:40;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
+time:100;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
+time:222;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
+time:287;ph:1;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
+time:407;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
