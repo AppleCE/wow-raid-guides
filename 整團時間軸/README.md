@@ -15,7 +15,7 @@
 | 劇毒 5 王 | 可用 | [H5（5補備案）](H/劇毒5王%285補%29.md) ・ [H5（6補預設）](H/劇毒5王%286補%29.md) | [fight 59](https://tw.warcraftlogs.com/reports/3AGyf4Ya7BLvZtPH?fight=59&type=summary) |
 | 劇毒 6 王 | 六補草案 | [H6 時間軸](H/劇毒6王.md) | [fight 18](https://www.warcraftlogs.com/reports/6AC2LBZ8D3NrfHWq?fight=18&type=summary) |
 | 劇毒 7 王 | 五／六補草案 | [H7（5補預設）](H/劇毒7王%285補%29.md) ・ [H7（6補追加）](H/劇毒7王%286補%29.md) | [指定 H 軸 fight 35](https://tw.warcraftlogs.com/reports/VQvzDYJ7Bjpqdm2H?fight=35&type=summary) |
-| 劇毒 8 王 | [五補草案](H/劇毒8王.md) | yRGhF8kw9tpjvbgd fight 35 | 參考場的五個同專精實際骨架；額外龍補不映射，待 RL 確認後轉 NS |
+| 劇毒 8 王 | 六補預設 | [五補備案](H/劇毒8王.md) ・ [六補預設](H/劇毒8王%286補%29.md) | [fight 35](https://tw.warcraftlogs.com/reports/yRGhF8kw9tpjvbgd?fight=35&type=summary) |
 
 ## 傳奇難度
 
