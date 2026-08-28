@@ -48,7 +48,7 @@ time:517;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導引;TTS:true;dur:5;
 time:518;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
 time:523;ph:1;tag:呆小鄭;spellid:120517;text:輝環;TTS:true;dur:5;
 time:542;ph:1;tag:Raitoningu;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
-time:558;ph:1;text:Arielle與呆小鄭顧最後三圈，菈菈預鋪，豆腐移動備援；三圈全部要吸;TTS:true;dur:10;
+time:558;ph:1;text:最後三圈放生不補，全補留主團，存活者交個減糖紅打死王;TTS:true;dur:10;
 time:565;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:10;
 time:574;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:10;
 time:590;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
