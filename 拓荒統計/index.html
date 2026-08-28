@@ -154,7 +154,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
         <h2 id="chartTitle">各王擊殺前拉了幾把</h2>
         <p class="hint">橫條＝該段 25%–75% 的公會落點；亮線＝中位數；橘點＝平均。只算已擊殺且有把數紀錄的公會。</p>
       </div>
-      <div class="seg" id="mode"><button data-v="buckets" aria-pressed="true">依世界排名</button><button data-v="order_buckets" aria-pressed="false">依擊殺順位</button></div>
+      <div class="ctl"><div class="seg" id="metric"><button data-v="pulls" aria-pressed="true">把數</button><button data-v="ilvl" aria-pressed="false">擊殺裝等</button></div><div class="seg" id="mode"><button data-v="buckets" aria-pressed="true">依世界排名</button><button data-v="order_buckets" aria-pressed="false">依擊殺順位</button></div></div>
     </div>
     <div class="tabs" id="tabs"></div>
     <div id="chart"></div>
@@ -163,7 +163,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
 
   <section class="two">
     <div class="card">
-      <div><h3>依世界排名分段</h3><p class="hint">中位數（樣本團數）。區間互斥。</p></div>
+      <div><h3>依世界排名分段</h3><p class="hint">中位把數（樣本團數），下行＝擊殺時平均裝等。區間互斥。</p></div>
       <div class="wrap"><table id="t1"></table></div>
     </div>
     <div class="card">
@@ -183,6 +183,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
         <div class="box"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#8b8983" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input id="q" placeholder="搜尋公會／伺服器" aria-label="搜尋"></div>
         <div class="seg light" id="region"></div>
         <div class="seg light" id="limit"><button data-v="50">前 50</button><button data-v="100">前 100</button><button data-v="500" aria-pressed="true">前 500</button></div>
+        <div class="seg light" id="gview"><button data-v="pulls" aria-pressed="true">把數</button><button data-v="ilvl" aria-pressed="false">擊殺裝等</button></div>
       </div>
     </div>
     <div class="wrap guilds"><table id="guilds"></table></div>
@@ -199,7 +200,7 @@ const tip=$('#tip');
 const showTip=(e,h)=>{tip.innerHTML=h;tip.style.display='block';moveTip(e)};
 const moveTip=e=>{tip.style.left=Math.min(e.clientX+14,innerWidth-280)+'px';tip.style.top=Math.min(e.clientY+14,innerHeight-90)+'px'};
 const hideTip=()=>tip.style.display='none';
-let D=null,mode='buckets',bucket=null,region='',limit=500,shown=60,me=null;
+let D=null,mode='buckets',metric='pulls',bucket=null,region='',limit=500,shown=60,me=null,gview='pulls';
 const bossKey=b=>b.short.split(' ')[0];
 const binRange=label=>{const m=label.match(/(\d+)\s*[–-]\s*(\d+)/);if(m)return[+m[1],+m[2]];const n=label.match(/(\d+)/);return n?[1,+n[1]]:[1,1e9]};
 const binOf=rank=>D.buckets.find(l=>{const[a,b]=binRange(l);return rank>=a&&rank<=b});
@@ -212,6 +213,8 @@ function init(){
   const regs=[...new Set(D.guilds.map(g=>g.region))].sort();
   $('#region').innerHTML='<button data-v="" aria-pressed="true">全部</button>'+regs.map(r=>`<button data-v="${r}" aria-pressed="false">${r}</button>`).join('');
   seg('#mode',v=>{mode=v;buildTabs();drawChart()});
+  seg('#metric',v=>{metric=v;drawChart()});
+  seg('#gview',v=>{gview=v;drawGuilds()});
   seg('#region',v=>{region=v;shown=60;drawGuilds()});
   seg('#limit',v=>{limit=+v;shown=60;drawGuilds()});
   buildTabs();drawChart();drawTables();drawGuilds();
@@ -238,21 +241,22 @@ function selectGuild(g){
   const bin=binOf(g.rank);
   const nym=(D.nymrissa||[]).find(n=>n.guild===g.guild&&n.realm===g.realm);
   const nb=g.pulls.length;
-  let cards=D.bosses.slice(0,nb).map((b,i)=>kpi(b,g.pulls[i],g.progress[i],bin));
+  let cards=D.bosses.slice(0,nb).map((b,i)=>kpi(b,g.pulls[i],g.progress[i],bin,false,(g.ilvl||[])[i]));
   const nymBoss=D.bosses[nb];if(nymBoss)cards.push(kpi(nymBoss,nym?nym.pulls:null,null,binOf(nym?nym.rank:1e9),true));
   const prev=g.previous_rank?`<span class="chip">上版 #${g.previous_rank}${delta(g)}</span>`:'';
   $('#gcard').innerHTML=`<div class="gc-head"><div class="gc-name"><b>${g.guild}</b><span>${g.region} · ${g.realm}</span></div><div class="chips"><span class="chip acc">世界 #${g.rank} · ${bin} 段</span>${prev}</div></div><div class="gc-grid">${cards.join('')}</div><p class="hint">同段＝世界排名 ${bin} 的公會；中位數只算已擊殺且有把數紀錄的公會。</p>`;
   drawGuilds();
 }
 function delta(g){if(!g.previous_rank)return'';const d=g.previous_rank-g.rank;return d>0?` <span class="up">▲${d}</span>`:d<0?` <span class="down">▼${-d}</span>`:''}
-function kpi(b,pulls,prog,bin,isNym){
+function kpi(b,pulls,prog,bin,isNym,il){
   const st=bin&&b.buckets?b.buckets[bin]:null;
+  const ilLine=il?`<span class="d">裝等 ${il}${st&&st.ilvl?` · 同段 ${st.ilvl.median}`:''}</span>`:'';
   if(pulls!==null&&pulls!==undefined&&pulls>0){
     let d='<span class="d">同段無擊殺樣本</span>';
     if(st){const diff=pulls-st.median;d=diff>0?`<span class="d more">同段中位 ${fmt(st.median)} · 多 ${fmt(diff)}</span>`:diff<0?`<span class="d less">同段中位 ${fmt(st.median)} · 少 ${fmt(-diff)}</span>`:`<span class="d">同段中位 ${fmt(st.median)} · 持平</span>`}
-    return`<div class="kpi"><div class="l">${b.short}</div><div class="v"><b>${pulls}</b><small>把</small></div>${d}</div>`}
+    return`<div class="kpi"><div class="l">${b.short}</div><div class="v"><b>${pulls}</b><small>把</small></div>${d}${ilLine}</div>`}
   if(pulls===0)return`<div class="kpi dim"><div class="l">${b.short}</div><div class="v"><b>0</b></div><span class="d">有擊殺但沒上傳紀錄</span></div>`;
-  if(prog&&prog[0]>0)return`<div class="kpi"><div class="l">${b.short}</div><div class="v"><b style="color:var(--ink-2)">${prog[0]}</b><small>把 · ${Math.round(prog[1])}%</small></div><span class="d">還在打${st?` · 同段中位 ${fmt(st.median)}`:' · 同段無擊殺樣本'}</span></div>`;
+  if(prog&&prog[0]>0)return`<div class="kpi"><div class="l">${b.short}</div><div class="v"><b style="color:var(--ink-2)">${prog[0]}</b><small>把 · ${Math.round(prog[1])}%</small></div><span class="d">還在打${st?` · 同段中位 ${fmt(st.median)}`:' · 同段無擊殺樣本'}</span>${il?`<span class="d">目前裝等 ${il}</span>`:''}</div>`;
   return`<div class="kpi dim"><div class="l">${b.short}</div><div class="v"><b>—</b></div><span class="d">${isNym?'無擊殺紀錄':'尚未開始'}</span></div>`;
 }
 
@@ -262,13 +266,17 @@ function buildTabs(){const tabs=$('#tabs');const list=mode==='buckets'?D.buckets
   tabs.querySelectorAll('button').forEach((btn,i)=>btn.onclick=()=>{bucket=list[i];tabs.querySelectorAll('button').forEach(c=>c.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');drawChart()});
 }
 function drawChart(){
-  $('#chartTitle').textContent=mode==='buckets'?`各王擊殺前拉了幾把（世界排名 ${bucket}）`:`各王擊殺前拉了幾把（該王 ${bucket} 的公會）`;
-  const rows=D.bosses.map(b=>({b,s:(b[mode]||{})[bucket]})).filter(r=>r.s);
+  const isIl=metric==='ilvl';
+  $('#chartTitle').textContent=(isIl?'各王擊殺時的平均裝等':'各王擊殺前拉了幾把')+(mode==='buckets'?`（世界排名 ${bucket}）`:`（該王 ${bucket} 的公會）`);
+  const rows=D.bosses.map(b=>{const st=(b[mode]||{})[bucket];return{b,s:isIl?(st&&st.ilvl):st}}).filter(r=>r.s);
   const missing=D.bosses.filter(b=>!(b[mode]||{})[bucket]);
   const mobile=innerWidth<900,W=mobile?360:1296,padL=mobile?0:200,padR=mobile?0:70,rowH=mobile?54:48,padT=mobile?8:14,padB=30,H=padT+padB+rows.length*rowH;
-  const max=Math.max(10,...rows.map(r=>r.s.max));const nice=Math.ceil(max/12)*12;const x=v=>padL+(W-padL-padR)*v/nice;
-  let s=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="各王拓荒把數區間">`;
-  for(let t=0;t<=nice;t+=nice/6){s+=`<line class="axis" x1="${x(t)}" y1="${padT}" x2="${x(t)}" y2="${H-padB+4}"/><text class="tick" x="${x(t)}" y="${H-padB+18}" text-anchor="middle">${t}</text>`}
+  let lo=0,nice,x;
+  if(isIl){const mn=Math.min(...rows.map(r=>r.s.p25)),mx=Math.max(...rows.map(r=>r.s.p75));lo=Math.floor((mn-2)/5)*5;nice=Math.ceil((mx+2)/5)*5;x=v=>padL+(W-padL-padR)*(v-lo)/(nice-lo)}
+  else{const max=Math.max(10,...rows.map(r=>r.s.max));nice=Math.ceil(max/12)*12;x=v=>padL+(W-padL-padR)*v/nice}
+  const step=isIl?5:nice/6;
+  let s=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="各王拓荒統計區間">`;
+  for(let t=lo;t<=nice+0.01;t+=step){s+=`<line class="axis" x1="${x(t)}" y1="${padT}" x2="${x(t)}" y2="${H-padB+4}"/><text class="tick" x="${x(t)}" y="${H-padB+18}" text-anchor="middle">${Math.round(t)}</text>`}
   rows.forEach((r,i)=>{const st=r.s,y=padT+i*rowH+(mobile?rowH-14:rowH/2);
     if(mobile)s+=`<text class="rowl" x="0" y="${padT+i*rowH+14}">${r.b.short}</text><text class="val" x="${W}" y="${padT+i*rowH+14}" text-anchor="end">中位 ${fmt(st.median)} · ${st.n} 團</text>`;
     else s+=`<text class="rowl" x="${padL-14}" y="${y+4}" text-anchor="end">${r.b.short}</text>`;
@@ -276,13 +284,13 @@ function drawChart(){
     if(!mobile)s+=`<text class="val" x="${x(Math.max(st.p75,st.mean))+12}" y="${y+4}">中位 ${fmt(st.median)} · 平均 ${fmt(st.mean)} · ${st.n} 團</text>`;
     s+=`<rect class="hit" x="0" y="${padT+i*rowH}" width="${W}" height="${rowH}" data-i="${i}"/>`});
   s+='</svg>';$('#chart').innerHTML=s;
-  $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i],st=r.s;const html=`<b>${r.b.short}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75} 把<br>中位數 ${fmt(st.median)}・平均 ${fmt(st.mean)}<br>最多 ${st.max} 把`;h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
+  $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i],st=r.s;const u=isIl?'':' 把';const html=`<b>${r.b.short}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75}${u}<br>中位數 ${fmt(st.median)}・平均 ${fmt(st.mean)}${st.max!==undefined?`<br>最多 ${st.max}${u}`:''}`;h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
   $('#chartFoot').innerHTML=missing.map(b=>{const ip=b.in_progress;return`<div>${b.short}：${b.killed_guilds?`此段無擊殺樣本（共 ${b.killed_guilds} 團已殺）`:'無擊殺'}${ip?`；${ip.n} 團還在打，平均 ${fmt(ip.mean_pulls)} 把、最佳 ${Math.round(ip.median_best)}%`:b.killed_guilds?'':'；尚無公會開拉'}</div>`}).join('');
 }
 addEventListener('resize',()=>{if(D)drawChart()});
 
 /* ---------- bin tables ---------- */
-const cell=s=>s?`<td>${fmt(s.median)} <span class="n">(${s.n})</span></td>`:'<td class="none">—</td>';
+const cell=s=>s?`<td>${fmt(s.median)} <span class="n">(${s.n})</span>${s.ilvl?`<div class="n">裝等 ${s.ilvl.mean}</div>`:''}</td>`:'<td class="none">—</td>';
 function drawTables(){
   $('#t1').innerHTML='<thead><tr><th class="l">王</th>'+D.buckets.map(b=>`<th>${b}</th>`).join('')+'</tr></thead><tbody>'+D.bosses.filter(b=>Object.values(b.buckets||{}).some(x=>x)).map(b=>`<tr><td class="l">${b.short}</td>`+D.buckets.map(k=>cell(b.buckets[k])).join('')+'</tr>').join('')+'</tbody>';
   $('#t2').innerHTML='<thead><tr><th class="l">王</th>'+D.order_buckets.map(b=>`<th>${b}</th>`).join('')+'</tr></thead><tbody>'+D.bosses.filter(b=>b.order_buckets&&Object.values(b.order_buckets).some(x=>x)).map(b=>`<tr><td class="l">${b.short}</td>`+D.order_buckets.map(k=>{const s=b.order_buckets[k];return s?`<td>${fmt(s.median)}${s.n!==25?` <span class="n">(${s.n})</span>`:''}</td>`:'<td class="none">—</td>'}).join('')+'</tr>').join('')+'</tbody>';
@@ -298,7 +306,9 @@ function drawGuilds(){
   const head='<thead><tr><th>#</th><th>上版</th><th class="l">公會</th><th class="l">區域 · 伺服器</th><th>殺</th>'+D.bosses.slice(0,nb).map(b=>`<th>${bossKey(b)}</th>`).join('')+'<th>浪縛</th></tr></thead>';
   const vis=rows.slice(0,shown);
   const tr=g=>{const bin=binOf(g.rank);const isMe=me&&me.guild===g.guild&&me.realm===g.realm;
-    return`<tr class="${isMe?'me':''}"><td class="num">${g.rank}</td><td>${g.previous_rank?`<span class="n" style="font-size:13px">${g.previous_rank}</span>${delta(g)}`:'<span class="none">—</span>'}</td><td class="l"><b style="font-weight:500">${g.guild}</b></td><td class="l" style="color:var(--ink-3)">${g.region} · ${g.realm}</td><td>${g.killed}</td>`+g.pulls.map((p,i)=>{const b=D.bosses[i];if(p!==null&&p!==undefined){if(p===0)return'<td class="none" title="有擊殺但沒上傳紀錄">0</td>';return`<td style="${shade(p,b.buckets[bin])}">${p}</td>`}const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]} · ${Math.round(pr[1])}%</td>`:'<td class="none">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${nym.get(g.guild+'|'+g.realm)}</td>`:'<td class="none">—</td>')+'</tr>'};
+    return`<tr class="${isMe?'me':''}"><td class="num">${g.rank}</td><td>${g.previous_rank?`<span class="n" style="font-size:13px">${g.previous_rank}</span>${delta(g)}`:'<span class="none">—</span>'}</td><td class="l"><b style="font-weight:500">${g.guild}</b></td><td class="l" style="color:var(--ink-3)">${g.region} · ${g.realm}</td><td>${g.killed}</td>`+g.pulls.map((p,i)=>{const b=D.bosses[i];const il=(g.ilvl||[])[i];
+      if(gview==='ilvl'){if(p!==null&&p!==undefined)return il?`<td title="擊殺陣容平均裝等">${il}</td>`:'<td class="none">—</td>';const pr=g.progress[i];return pr&&pr[0]&&il?`<td class="prog" title="目前拉的陣容">${il}</td>`:'<td class="none">—</td>'}
+      if(p!==null&&p!==undefined){if(p===0)return'<td class="none" title="有擊殺但沒上傳紀錄">0</td>';return`<td style="${shade(p,b.buckets[bin])}" title="${il?'擊殺裝等 '+il:''}">${p}</td>`}const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]} · ${Math.round(pr[1])}%</td>`:'<td class="none">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${nym.get(g.guild+'|'+g.realm)}</td>`:'<td class="none">—</td>')+'</tr>'};
   $('#guilds').innerHTML=head+'<tbody>'+vis.map(tr).join('')+'</tbody>';
   $('#mcards').innerHTML=vis.map(g=>{const isMe=me&&me.guild===g.guild&&me.realm===g.realm;const cells=g.pulls.map((p,i)=>{const b=D.bosses[i];if(p!==null&&p!==undefined)return`<div><em>${bossKey(b)}</em><b class="${p===0?'none':''}">${p}</b></div>`;const pr=g.progress[i];return pr&&pr[0]?`<div><em>${bossKey(b)}</em><b class="prog">${pr[0]}·${Math.round(pr[1])}%</b></div>`:`<div><em>${bossKey(b)}</em><b class="none">—</b></div>`});
     if(nym.has(g.guild+'|'+g.realm))cells.push(`<div><em>浪縛</em><b>${nym.get(g.guild+'|'+g.realm)}</b></div>`);
