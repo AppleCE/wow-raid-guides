@@ -26,7 +26,7 @@
 | 劇毒 H6–H7 | 完成 | 完成 | 完成 | 補薩／龍補 | H6–H7 完成草案 |
 | 劇毒 H8 | 完成 | 完成 | 完成 | 待 RL 確認後製作 | 五補 RL 草案完成，NS 待確認 |
 | 劇毒 M1 | mechanics-ready | 舊參考場完成，待當日 Google 指定 WCL 重鎖 | 待指定 WCL | 待指定 WCL | 待指定 WCL |
-| 劇毒 M3 | 完成 | RL 整團軸完成 | 四補完成 | 四補完成 | 四補 NS 完成，待本團 WCL 微調 |
+| 劇毒 M3 | 完成 | 治療分析與 RL 整團軸完成 | 四補完成 | 四補完成 | 四補 NS 完成，待本團 WCL 微調 |
 | 劇毒 M2／M4–M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
 
 「完成」表示已有當前版本機制與可用 WCL 骨架，不表示補軸永久定案；取得本團拓荒 WCL 後仍會逐波復盤。
@@ -50,6 +50,7 @@
 ## 每王治療分析
 
 - [劇毒 1 王 M：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/M/治療分析.md)
+- [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/治療分析.md)
 - [浪縛單王 H：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/H/治療分析.md)
 - [劇毒 1 王 H：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/H/治療分析.md)
 - [劇毒 2 王 H：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/H/治療分析.md)
@@ -65,7 +66,7 @@
 ## 補職攻略
 
 - [H 英雄難度補職攻略](補職攻略/H/README.md)：既有六補職攻略、補師分配，以及補薩／龍補通用個人 NS。
-- [M 傳奇難度補職攻略](補職攻略/M/README.md)：固定四補角色頁；目前包含浪縛單王與 M1 的待校準入口，以及已完成的 M3 四補分工。
+- [M 傳奇難度補職攻略](補職攻略/M/README.md)：固定四補角色頁；[M1 待重鎖分配](補職攻略/M/補師分配/M1_Nekzali.md)與[M3 四補分配](補職攻略/M/補師分配/M3_The_Lost_Explorers.md)分王維護。
 
 ## 提供意見
 

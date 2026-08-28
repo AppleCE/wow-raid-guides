@@ -13,7 +13,7 @@
 | 首領 | 狀態 | 使用方式 |
 | --- | --- | --- |
 | 浪縛單王 Nymrissa | `待當日資料` | 已納入進度清單；先刷新 Google 分頁與 WCL Progress，再建立 M 治療模型，不能沿用 H 秒數 |
-| 劇毒 M1 Nek'zali | `治療模型待重鎖` | Google 文件會更新；正式個人分工要以當日指定 WCL 重建，舊 `DGg...` 只作補充證據 |
-| 劇毒 M3 The Lost Explorers | `draft` | 已鎖 `FGWY...` fight 30、先知 → 大副 → 商人，可依四名角色頁與本團 NS 拓荒 |
+| [劇毒 M1 Nek'zali](../../首領/劇毒1王_Nekzali_the_Soulcoiler/M/完整攻略.md) | `治療模型待重鎖` | [治療分析](../../首領/劇毒1王_Nekzali_the_Soulcoiler/M/治療分析.md)｜[補師分配草案](補師分配/M1_Nekzali.md)；Google 文件會更新，舊 `DGg...` 只作補充證據 |
+| [劇毒 M3 The Lost Explorers](../../首領/劇毒3王_The_Lost_Explorers/M/完整攻略.md) | `draft` | [治療分析](../../首領/劇毒3王_The_Lost_Explorers/M/治療分析.md)｜[四補分配](補師分配/M3_The_Lost_Explorers.md)｜[整團時間軸](../../整團時間軸/M/劇毒3王.md)｜[四補 NS](../../整團NS軸/本團/M/劇毒3王.txt) |
 
-M3：[完整攻略](../../首領/劇毒3王_The_Lost_Explorers/M/完整攻略.md)｜[整團時間軸](../../整團時間軸/M/劇毒3王.md)｜[四補 NS](../../整團NS軸/本團/M/劇毒3王.txt)
+M1 與 M3 使用不同戰鬥流程與 phase 起點；即使四補相同，也不得互相複製原始秒數。
