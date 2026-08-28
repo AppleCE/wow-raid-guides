@@ -2,7 +2,7 @@
 
 這是一套給團隊實戰使用的治療資料：先讀首領頁理解「為什麼這裡危險」，再看自己的補職頁，最後把 NS 軸匯入遊戲。
 
-版本：正式服 `12.1.0`。最後整理：`2026-08-27（Asia/Taipei）`。
+版本：正式服 `12.1.0`。最後整理：`2026-08-28（Asia/Taipei）`。
 
 ## 從這裡開始
 
@@ -24,7 +24,7 @@
 | 劇毒 H3–H5 | 待補 | 完成 | 完成 | 補薩／龍補 | H3–H5 完成草案 |
 | 劇毒 H6–H7 | 完成 | 完成 | 完成 | 補薩／龍補 | H6–H7 完成草案 |
 | 劇毒 H8 | 完成 | 完成 | 完成 | 待 RL 確認後製作 | 五補 RL 草案完成，NS 待確認 |
-| 劇毒 M1 | mechanics-ready | 待本團 WCL | 待本團 WCL | 待本團 WCL | 待本團 WCL |
+| 劇毒 M1 | mechanics-ready | 參考場完成，待本團 WCL 校準 | 待本團 WCL | 待本團 WCL | 待本團 WCL |
 | 劇毒 M3 | 完成 | RL 整團軸完成 | 四補完成 | 四補完成 | 四補 NS 完成，待本團 WCL 微調 |
 | 劇毒 M2／M4–M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
 
@@ -48,6 +48,7 @@
 
 ## 每王治療分析
 
+- [劇毒 1 王 M：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/M/治療分析.md)
 - [浪縛單王 H：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/H/治療分析.md)
 - [劇毒 1 王 H：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/H/治療分析.md)
 - [劇毒 2 王 H：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/H/治療分析.md)
