@@ -25,7 +25,6 @@ time:75;ph:3;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
 time:95;ph:3;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
 time:102;ph:3;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
 time:1;ph:4;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:5;
-time:65;ph:4;text:商人火浪只躲不硬補：炸彈放邊，等火浪到才踩蘑菇;TTS:true;dur:10;
 time:74;ph:4;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
 time:94;ph:4;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
 time:99;ph:4;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
