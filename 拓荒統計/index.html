@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>劇毒深淵傳奇拓荒把數</title>
+<style>
+:root{color-scheme:light dark;
+  --surface:#fcfcfb;--surface-2:#f0efec;--line:#e2e1dd;--ink:#0b0b0b;--ink-2:#52514e;--ink-3:#8a8985;
+  --blue-250:#86b6ef;--blue-450:#2a78d6;--blue-600:#184f95;--orange:#eb6834;--good:#008300;}
+@media (prefers-color-scheme:dark){:root{--surface:#1a1a19;--surface-2:#262624;--line:#383835;--ink:#fff;--ink-2:#c3c2b7;--ink-3:#8f8e87;
+  --blue-250:#184f95;--blue-450:#3987e5;--blue-600:#9ec5f4;--orange:#d95926;--good:#3cae3c;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:15px/1.55 system-ui,"Noto Sans TC","Microsoft JhengHei",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:var(--ink-2);margin:0 0 20px}
+.sub b{color:var(--ink)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.tabs button{border:1px solid var(--line);background:var(--surface-2);color:var(--ink-2);padding:6px 14px;border-radius:999px;cursor:pointer;font:inherit}
+.tabs button[aria-pressed=true]{background:var(--blue-450);border-color:var(--blue-450);color:#fff}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:22px;background:var(--surface)}
+.card h2{font-size:17px;margin:0 0 2px}
+.card .hint{color:var(--ink-2);font-size:13px;margin:0 0 12px}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--ink-2);margin:0 0 8px;flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend .band::before{background:var(--blue-250)}
+.legend .med::before{background:var(--blue-600);width:3px;border-radius:1px;height:14px;vertical-align:-2px}
+.legend .mean::before{background:var(--orange);border-radius:50%;width:9px;height:9px}
+svg{width:100%;height:auto;display:block}
+.row-label{fill:var(--ink);font-size:13px}
+.axis{stroke:var(--line);stroke-width:1}
+.tick{fill:var(--ink-3);font-size:11px}
+.val{fill:var(--ink-2);font-size:12px}
+.hit{fill:transparent;cursor:default}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--surface);padding:8px 10px;border-radius:6px;font-size:12px;line-height:1.5;display:none;z-index:9;max-width:260px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+th{color:var(--ink-2);font-weight:600;font-size:13px;position:sticky;top:0;background:var(--surface)}
+tbody tr:hover{background:var(--surface-2)}
+.wrap{overflow-x:auto}
+.muted{color:var(--ink-3)}
+.prog{color:var(--ink-2)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 10px;align-items:center}
+.controls input,.controls select{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+.small{font-size:13px;color:var(--ink-2)}
+footer{color:var(--ink-3);font-size:12px;margin-top:30px}
+a{color:var(--blue-450)}
+</style>
+</head>
+<body>
+<main>
+<h1>劇毒深淵傳奇：前 N 公會各王拓荒把數</h1>
+<p class="sub" id="meta">載入中…</p>
+
+<div class="tabs" id="tabs" role="tablist"></div>
+
+<section class="card">
+  <h2 id="chart-title">各王擊殺前拉了幾把</h2>
+  <p class="hint">只算已擊殺且有上傳 log 的公會。橫條＝25%–75% 的公會落在這個把數區間；深色線＝中位數；橘點＝平均。滑過看樣本數與最大值。</p>
+  <div class="legend"><span class="band">25–75% 區間</span><span class="med">中位數</span><span class="mean">平均</span></div>
+  <div id="chart"></div>
+</section>
+
+<section class="card">
+  <h2>各分段數字</h2>
+  <p class="hint">格式：平均／中位數（樣本數）。「還在打」＝前 500 內尚未擊殺但已開始拉的公會。</p>
+  <div class="wrap"><table id="summary"></table></div>
+</section>
+
+<section class="card">
+  <h2>前 500 公會逐王把數</h2>
+  <p class="hint">數字＝擊殺用的把數；<span class="prog">把數·最佳%</span>＝尚未擊殺；— ＝還沒拉；0 ＝有擊殺但沒上傳 log。浪縛欄只在該公會有公開 WCL 擊殺紀錄時顯示。</p>
+  <div class="controls">
+    <input id="q" placeholder="搜尋公會／伺服器" aria-label="搜尋">
+    <select id="region" aria-label="區域"><option value="">全部區域</option></select>
+    <select id="limit" aria-label="顯示數量"><option value="50">前 50</option><option value="100">前 100</option><option value="200">前 200</option><option value="500" selected>前 500</option></select>
+    <span class="small" id="count"></span>
+  </div>
+  <div class="wrap"><table id="guilds"></table></div>
+</section>
+
+<footer id="foot"></footer>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const $=s=>document.querySelector(s);
+const tip=$('#tip');
+function showTip(e,html){tip.innerHTML=html;tip.style.display='block';moveTip(e)}
+function moveTip(e){const x=Math.min(e.clientX+14,innerWidth-280),y=Math.min(e.clientY+14,innerHeight-90);tip.style.left=x+'px';tip.style.top=y+'px'}
+function hideTip(){tip.style.display='none'}
+let D=null,bucket='100';
+fetch('data/latest.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;bucket=String(d.buckets.includes(100)?100:d.buckets[0]);init()}).catch(e=>{$('#meta').textContent='資料載入失敗：'+e});
+function init(){
+  $('#meta').innerHTML=`資料時間 <b>${D.checked_at}</b>（Asia/Taipei，不定期更新）。名單：raider.io 世界進度榜前 ${D.top}，其中 <b>${D.resolved}</b> 個公會對到 WCL 進度資料；把數來自 WCL 進度榜 pullCount。`;
+  const tabs=$('#tabs');
+  D.buckets.forEach(b=>{const btn=document.createElement('button');btn.textContent='前 '+b;btn.setAttribute('role','tab');btn.setAttribute('aria-pressed',String(b)===bucket);btn.onclick=()=>{bucket=String(b);[...tabs.children].forEach(c=>c.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');drawChart()};tabs.appendChild(btn)});
+  drawChart();drawSummary();
+  const regions=[...new Set(D.guilds.map(g=>g.region))].sort();
+  regions.forEach(r=>{const o=document.createElement('option');o.value=r;o.textContent=r;$('#region').appendChild(o)});
+  ['#q','#region','#limit'].forEach(s=>$(s).addEventListener('input',drawGuilds));
+  drawGuilds();
+  $('#foot').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 進度榜</a>（公會名單）、Warcraft Logs 進度 API（pull 數）。WCL 進度 API 只在競速期間開放。原始資料：<a href="data/latest.json">data/latest.json</a>、<a href="history/">history/</a>。`;
+}
+function drawChart(){
+  $('#chart-title').textContent=`各王擊殺前拉了幾把（前 ${bucket} 公會）`;
+  const rows=D.bosses.map(b=>({name:b.short,s:b.buckets[bucket]})).filter(r=>r.s);
+  const W=1000,rowH=44,padL=150,padR=60,padT=26,padB=30,H=padT+padB+rows.length*rowH;
+  const max=Math.max(10,...rows.map(r=>r.s.max));const nice=Math.ceil(max/10)*10;
+  const x=v=>padL+(W-padL-padR)*v/nice;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="各王拓荒把數區間">`;
+  for(let t=0;t<=nice;t+=nice/5){s+=`<line class="axis" x1="${x(t)}" y1="${padT-6}" x2="${x(t)}" y2="${H-padB+4}"/><text class="tick" x="${x(t)}" y="${H-padB+18}" text-anchor="middle">${t}</text>`}
+  rows.forEach((r,i)=>{const y=padT+i*rowH+rowH/2;const st=r.s;
+    s+=`<text class="row-label" x="${padL-12}" y="${y+4}" text-anchor="end">${r.name}</text>`;
+    s+=`<rect x="${x(st.p25)}" y="${y-9}" width="${Math.max(3,x(st.p75)-x(st.p25))}" height="18" rx="4" fill="var(--blue-250)"/>`;
+    s+=`<rect x="${x(st.median)-1.5}" y="${y-13}" width="3" height="26" rx="1" fill="var(--blue-600)"/>`;
+    s+=`<circle cx="${x(st.mean)}" cy="${y}" r="5" fill="var(--orange)" stroke="var(--surface)" stroke-width="2"/>`;
+    s+=`<text class="val" x="${x(Math.max(st.p75,st.mean))+10}" y="${y+4}">中位 ${st.median}・平均 ${st.mean}</text>`;
+    s+=`<rect class="hit" x="${padL}" y="${y-rowH/2}" width="${W-padL-padR}" height="${rowH}" data-i="${i}"/>`});
+  s+='</svg>';
+  $('#chart').innerHTML=s;
+  $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i];const st=r.s;const html=`<b>${r.name}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75} 把<br>中位數 ${st.median}・平均 ${st.mean}<br>最多 ${st.max} 把`;
+    h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
+}
+function drawSummary(){
+  let h='<thead><tr><th class="l">王</th>'+D.buckets.map(b=>`<th>前 ${b}</th>`).join('')+'<th>已殺公會</th><th>還在打</th></tr></thead><tbody>';
+  D.bosses.forEach(b=>{h+=`<tr><td class="l">${b.short}${b.note?' <span class="muted" title="'+b.note+'">ⓘ</span>':''}</td>`+D.buckets.map(k=>{const s=b.buckets[String(k)];return s?`<td>${s.mean}／${s.median} <span class="muted">(${s.n})</span></td>`:'<td class="muted">—</td>'}).join('')+`<td>${b.killed_guilds}</td><td>${b.in_progress?`${b.in_progress.n} 個・平均 ${b.in_progress.mean_pulls} 把・最佳 ${b.in_progress.median_best}%`:'<span class="muted">—</span>'}</td></tr>`});
+  $('#summary').innerHTML=h+'</tbody>';
+}
+function drawGuilds(){
+  const q=$('#q').value.trim().toLowerCase(),reg=$('#region').value,lim=+$('#limit').value;
+  const rows=D.guilds.filter(g=>g.rank<=lim&&(!reg||g.region===reg)&&(!q||(g.guild+' '+g.realm).toLowerCase().includes(q)));
+  $('#count').textContent=`${rows.length} 個公會`;
+  const nb=D.guilds[0]?D.guilds[0].pulls.length:D.bosses.length;const nym=new Map((D.nymrissa||[]).map(n=>[n.guild+'|'+n.realm,n.pulls]));
+  let h='<thead><tr><th>#</th><th class="l">公會</th><th class="l">伺服器</th><th>殺</th>'+D.bosses.slice(0,nb).map(b=>`<th>${b.short.split(' ')[0]}</th>`).join('')+'<th>浪縛</th></tr></thead><tbody>';
+  rows.forEach(g=>{h+=`<tr><td>${g.rank}</td><td class="l">${g.guild}</td><td class="l">${g.region}－${g.realm}</td><td>${g.killed}</td>`+g.pulls.map((p,i)=>{if(p!==null)return`<td>${p}</td>`;const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]}·${Math.round(pr[1])}%</td>`:'<td class="muted">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${nym.get(g.guild+'|'+g.realm)}</td>`:'<td class="muted">—</td>')+'</tr>'});
+  $('#guilds').innerHTML=h+'</tbody>';
+}
+</script>
+</body>
+</html>
