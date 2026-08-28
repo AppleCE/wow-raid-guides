@@ -76,7 +76,7 @@ a{color:var(--blue-450)}
 
 <section class="card">
   <h2>前 500 公會逐王把數</h2>
-  <p class="hint">數字＝擊殺用的把數；<span class="prog">把數·最佳%</span>＝尚未擊殺；— ＝還沒拉；0 ＝有擊殺但沒上傳 log。浪縛欄只在該公會有公開 WCL 擊殺紀錄時顯示。</p>
+  <p class="hint">本版排名＝目前劇毒深淵世界排名；上版排名＝Raider.IO MN Tier 1（VS／DR／MQD）世界排名。數字＝擊殺用的把數；<span class="prog">把數·最佳%</span>＝尚未擊殺；— ＝未列上版前 1000、還沒拉或沒有可用紀錄。浪縛欄只在該公會有可用首殺把數時顯示。</p>
   <div class="controls">
     <input id="q" placeholder="搜尋公會／伺服器" aria-label="搜尋">
     <select id="region" aria-label="區域"><option value="">全部區域</option></select>
@@ -146,8 +146,8 @@ function drawGuilds(){
   const rows=D.guilds.filter(g=>g.rank<=lim&&(!reg||g.region===reg)&&(!q||(g.guild+' '+g.realm).toLowerCase().includes(q)));
   $('#count').textContent=`${rows.length} 個公會`;
   const nb=D.guilds[0]?D.guilds[0].pulls.length:D.bosses.length;const nym=new Map((D.nymrissa||[]).map(n=>[n.guild+'|'+n.realm,n.pulls]));
-  let h='<thead><tr><th>#</th><th class="l">公會</th><th class="l">伺服器</th><th>殺</th>'+D.bosses.slice(0,nb).map(b=>`<th>${b.short.split(' ')[0]}</th>`).join('')+'<th>浪縛</th></tr></thead><tbody>';
-  rows.forEach(g=>{h+=`<tr><td>${g.rank}</td><td class="l">${g.guild}</td><td class="l">${g.region}－${g.realm}</td><td>${g.killed}</td>`+g.pulls.map((p,i)=>{if(p!==null)return`<td>${p}</td>`;const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]}·${Math.round(pr[1])}%</td>`:'<td class="muted">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${nym.get(g.guild+'|'+g.realm)}</td>`:'<td class="muted">—</td>')+'</tr>'});
+  let h='<thead><tr><th>本版排名</th><th>上版排名</th><th class="l">公會</th><th class="l">伺服器</th><th>殺</th>'+D.bosses.slice(0,nb).map(b=>`<th>${b.short.split(' ')[0]}</th>`).join('')+'<th>浪縛</th></tr></thead><tbody>';
+  rows.forEach(g=>{h+=`<tr><td>${g.rank}</td><td>${g.previous_rank??'<span class="muted">—</span>'}</td><td class="l">${g.guild}</td><td class="l">${g.region}－${g.realm}</td><td>${g.killed}</td>`+g.pulls.map((p,i)=>{if(p!==null)return`<td>${p}</td>`;const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]}·${Math.round(pr[1])}%</td>`:'<td class="muted">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${nym.get(g.guild+'|'+g.realm)}</td>`:'<td class="muted">—</td>')+'</tr>'});
   $('#guilds').innerHTML=h+'</tbody>';
 }
 </script>
