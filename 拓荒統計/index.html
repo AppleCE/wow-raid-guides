@@ -54,19 +54,24 @@ a{color:var(--blue-450)}
 <h1>劇毒深淵傳奇：前 N 公會各王拓荒把數</h1>
 <p class="sub" id="meta">載入中…</p>
 
+<div class="controls"><label class="small">分段方式
+  <select id="mode"><option value="buckets">依世界進度排名（互斥區間）</option><option value="order_buckets">依該王擊殺順位（越早殺越前面）</option></select></label></div>
 <div class="tabs" id="tabs" role="tablist"></div>
 
 <section class="card">
   <h2 id="chart-title">各王擊殺前拉了幾把</h2>
-  <p class="hint">只算已擊殺且有上傳 log 的公會。橫條＝25%–75% 的公會落在這個把數區間；深色線＝中位數；橘點＝平均。滑過看樣本數與最大值。</p>
+  <p class="hint">只算已擊殺且有把數紀錄的公會。橫條＝25%–75% 的公會落在這個把數區間；深色線＝中位數；橘點＝平均。滑過看樣本數與最大值。</p>
   <div class="legend"><span class="band">25–75% 區間</span><span class="med">中位數</span><span class="mean">平均</span></div>
   <div id="chart"></div>
 </section>
 
 <section class="card">
-  <h2>各分段數字</h2>
-  <p class="hint">格式：平均／中位數（樣本數）。「還在打」＝前 500 內尚未擊殺但已開始拉的公會。</p>
+  <h2>依世界進度排名分段</h2>
+  <p class="hint">格式：平均／中位數（樣本數）。區間互斥。「還在打」＝前 500 內尚未擊殺但已開始拉的公會。</p>
   <div class="wrap"><table id="summary"></table></div>
+  <h2 style="margin-top:18px">依該王擊殺順位分段</h2>
+  <p class="hint">把所有殺掉這隻王的公會按擊殺時間排序，第 1 個殺的＝順位 1。看的是「越晚殺是否越省把數」。浪縛單王缺擊殺時間，不列。</p>
+  <div class="wrap"><table id="summary2"></table></div>
 </section>
 
 <section class="card">
@@ -90,12 +95,12 @@ const tip=$('#tip');
 function showTip(e,html){tip.innerHTML=html;tip.style.display='block';moveTip(e)}
 function moveTip(e){const x=Math.min(e.clientX+14,innerWidth-280),y=Math.min(e.clientY+14,innerHeight-90);tip.style.left=x+'px';tip.style.top=y+'px'}
 function hideTip(){tip.style.display='none'}
-let D=null,bucket='100';
-fetch('data/latest.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;bucket=String(d.buckets.includes(100)?100:d.buckets[0]);init()}).catch(e=>{$('#meta').textContent='資料載入失敗：'+e});
+let D=null,bucket=null,mode='buckets';
+fetch('data/latest.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;bucket=d.buckets[0];init()}).catch(e=>{$('#meta').textContent='資料載入失敗：'+e});
 function init(){
   $('#meta').innerHTML=`資料時間 <b>${D.checked_at}</b>（Asia/Taipei，不定期更新）。名單：raider.io 世界進度榜前 ${D.top}，其中 <b>${D.resolved}</b> 個公會對到 WCL 進度資料；把數來自 WCL 進度榜 pullCount。`;
-  const tabs=$('#tabs');
-  D.buckets.forEach(b=>{const btn=document.createElement('button');btn.textContent='前 '+b;btn.setAttribute('role','tab');btn.setAttribute('aria-pressed',String(b)===bucket);btn.onclick=()=>{bucket=String(b);[...tabs.children].forEach(c=>c.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');drawChart()};tabs.appendChild(btn)});
+  const modeSel=$('#mode');modeSel.onchange=()=>{mode=modeSel.value;buildTabs();drawChart()};
+  buildTabs();
   drawChart();drawSummary();
   const regions=[...new Set(D.guilds.map(g=>g.region))].sort();
   regions.forEach(r=>{const o=document.createElement('option');o.value=r;o.textContent=r;$('#region').appendChild(o)});
@@ -103,9 +108,13 @@ function init(){
   drawGuilds();
   $('#foot').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 進度榜</a>（公會名單）、Warcraft Logs 進度 API（pull 數）。WCL 進度 API 只在競速期間開放。原始資料：<a href="data/latest.json">data/latest.json</a>、<a href="history/">history/</a>。`;
 }
+function buildTabs(){
+  const tabs=$('#tabs');tabs.innerHTML='';const list=mode==='buckets'?D.buckets:D.order_buckets;bucket=list[0];
+  list.forEach(b=>{const btn=document.createElement('button');btn.textContent=b;btn.setAttribute('role','tab');btn.setAttribute('aria-pressed',b===bucket);btn.onclick=()=>{bucket=b;[...tabs.children].forEach(c=>c.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');drawChart()};tabs.appendChild(btn)});
+}
 function drawChart(){
-  $('#chart-title').textContent=`各王擊殺前拉了幾把（前 ${bucket} 公會）`;
-  const rows=D.bosses.map(b=>({name:b.short,s:b.buckets[bucket]})).filter(r=>r.s);
+  $('#chart-title').textContent=mode==='buckets'?`各王擊殺前拉了幾把（世界排名 ${bucket}）`:`各王擊殺前拉了幾把（該王 ${bucket} 的公會）`;
+  const rows=D.bosses.map(b=>({name:b.short,s:(b[mode]||{})[bucket]})).filter(r=>r.s);
   const W=1000,rowH=44,padL=150,padR=60,padT=26,padB=30,H=padT+padB+rows.length*rowH;
   const max=Math.max(10,...rows.map(r=>r.s.max));const nice=Math.ceil(max/10)*10;
   const x=v=>padL+(W-padL-padR)*v/nice;
@@ -123,10 +132,14 @@ function drawChart(){
   $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i];const st=r.s;const html=`<b>${r.name}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75} 把<br>中位數 ${st.median}・平均 ${st.mean}<br>最多 ${st.max} 把`;
     h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
 }
+function cell(s){return s?`<td>${s.mean}／${s.median} <span class="muted">(${s.n})</span></td>`:'<td class="muted">—</td>'}
 function drawSummary(){
-  let h='<thead><tr><th class="l">王</th>'+D.buckets.map(b=>`<th>前 ${b}</th>`).join('')+'<th>已殺公會</th><th>還在打</th></tr></thead><tbody>';
-  D.bosses.forEach(b=>{h+=`<tr><td class="l">${b.short}${b.note?' <span class="muted" title="'+b.note+'">ⓘ</span>':''}</td>`+D.buckets.map(k=>{const s=b.buckets[String(k)];return s?`<td>${s.mean}／${s.median} <span class="muted">(${s.n})</span></td>`:'<td class="muted">—</td>'}).join('')+`<td>${b.killed_guilds}</td><td>${b.in_progress?`${b.in_progress.n} 個・平均 ${b.in_progress.mean_pulls} 把・最佳 ${b.in_progress.median_best}%`:'<span class="muted">—</span>'}</td></tr>`});
+  let h='<thead><tr><th class="l">王</th>'+D.buckets.map(b=>`<th>${b}</th>`).join('')+'<th>已殺公會</th><th>還在打</th></tr></thead><tbody>';
+  D.bosses.forEach(b=>{h+=`<tr><td class="l">${b.short}${b.note?' <span class="muted" title="'+b.note+'">ⓘ</span>':''}</td>`+D.buckets.map(k=>cell(b.buckets[k])).join('')+`<td>${b.killed_guilds}</td><td>${b.in_progress?`${b.in_progress.n} 個・平均 ${b.in_progress.mean_pulls} 把・最佳 ${b.in_progress.median_best}%`:'<span class="muted">—</span>'}</td></tr>`});
   $('#summary').innerHTML=h+'</tbody>';
+  let h2='<thead><tr><th class="l">王</th>'+D.order_buckets.map(b=>`<th>${b}</th>`).join('')+'</tr></thead><tbody>';
+  D.bosses.filter(b=>b.order_buckets&&Object.values(b.order_buckets).some(x=>x)).forEach(b=>{h2+=`<tr><td class="l">${b.short}</td>`+D.order_buckets.map(k=>cell(b.order_buckets[k])).join('')+'</tr>'});
+  $('#summary2').innerHTML=h2+'</tbody>';
 }
 function drawGuilds(){
   const q=$('#q').value.trim().toLowerCase(),reg=$('#region').value,lim=+$('#limit').value;
