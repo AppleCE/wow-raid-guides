@@ -1,12 +1,12 @@
-EncounterID:3420;Name:二團 劇毒 H 5王 Sszorak;Difficulty:Heroic
-time:12;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:20;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:47;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
-time:114;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:122;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:212;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:217;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:234;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
-time:323;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:332;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:418;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+EncounterID:3420;Name:通用龍補 劇毒 H 5王 Sszorak;Difficulty:Heroic
+time:1;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:17;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:48;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+time:96;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:104;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:180;ph:1;tag:龍補;spellid:374227;text:輕風;TTS:true;dur:5;
+time:207;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:223;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:239;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+time:300;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:314;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;

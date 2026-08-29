@@ -1,10 +1,12 @@
-EncounterID:3470;Name:二團 劇毒 H 1王 Nek'zali the Soulcoiler;Difficulty:Heroic
-time:50;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:75;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:138;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:154;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:245;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:264;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:358;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
-time:379;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
-time:458;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+EncounterID:3470;Name:通用龍補 劇毒 H 1王 Nek'zali the Soulcoiler;Difficulty:Heroic
+time:0;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:13;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:66;ph:1;tag:龍補;spellid:374227;text:輕風;TTS:true;dur:5;
+time:72;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+time:96;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:107;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:195;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:204;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
+time:280;ph:1;tag:龍補;spellid:363534;text:時光倒轉;TTS:true;dur:5;
+time:289;ph:1;tag:龍補;spellid:370537;text:靜滯開始存;TTS:true;dur:5;
+time:302;ph:1;tag:龍補;spellid:370564;text:靜滯釋放;TTS:true;dur:5;
