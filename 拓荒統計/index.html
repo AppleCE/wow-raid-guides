@@ -302,16 +302,16 @@ function drawGuilds(){
   const q=$('#q').value.trim().toLowerCase();
   const rows=D.guilds.filter(g=>g.rank<=limit&&(!region||g.region===region)&&(!q||(g.guild+' '+g.realm).toLowerCase().includes(q)));
   const nb=D.guilds[0]?D.guilds[0].pulls.length:D.bosses.length;
-  const nym=new Map((D.nymrissa||[]).map(n=>[n.guild+'|'+n.realm,n.pulls]));
+  const nym=new Map((D.nymrissa||[]).map(n=>[n.guild+'|'+n.realm,n]));
   const head='<thead><tr><th>#</th><th>上版</th><th class="l">公會</th><th class="l">區域 · 伺服器</th><th>殺</th>'+D.bosses.slice(0,nb).map(b=>`<th>${bossKey(b)}</th>`).join('')+'<th>浪縛</th></tr></thead>';
   const vis=rows.slice(0,shown);
   const tr=g=>{const bin=binOf(g.rank);const isMe=me&&me.guild===g.guild&&me.realm===g.realm;
     return`<tr class="${isMe?'me':''}"><td class="num">${g.rank}</td><td>${g.previous_rank?`<span class="n" style="font-size:13px">${g.previous_rank}</span>${delta(g)}`:'<span class="none">—</span>'}</td><td class="l"><b style="font-weight:500">${g.guild}</b></td><td class="l" style="color:var(--ink-3)">${g.region} · ${g.realm}</td><td>${g.killed}</td>`+g.pulls.map((p,i)=>{const b=D.bosses[i];const il=(g.ilvl||[])[i];
       if(gview==='ilvl'){if(p!==null&&p!==undefined)return il?`<td title="擊殺陣容平均裝等">${il}</td>`:'<td class="none">—</td>';const pr=g.progress[i];return pr&&pr[0]&&il?`<td class="prog" title="目前拉的陣容">${il}</td>`:'<td class="none">—</td>'}
-      if(p!==null&&p!==undefined){if(p===0)return'<td class="none" title="有擊殺但沒上傳紀錄">0</td>';return`<td style="${shade(p,b.buckets[bin])}" title="${il?'擊殺裝等 '+il:''}">${p}</td>`}const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]} · ${Math.round(pr[1])}%</td>`:'<td class="none">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${nym.get(g.guild+'|'+g.realm)}</td>`:'<td class="none">—</td>')+'</tr>'};
+      if(p!==null&&p!==undefined){if(p===0)return'<td class="none" title="有擊殺但沒上傳紀錄">0</td>';return`<td style="${shade(p,b.buckets[bin])}" title="${il?'擊殺裝等 '+il:''}">${p}</td>`}const pr=g.progress[i];return pr&&pr[0]?`<td class="prog">${pr[0]} · ${Math.round(pr[1])}%</td>`:'<td class="none">—</td>'}).join('')+(nym.has(g.guild+'|'+g.realm)?`<td>${gview==='ilvl'?(nym.get(g.guild+'|'+g.realm).ilvl??'<span class="none">—</span>'):nym.get(g.guild+'|'+g.realm).pulls}</td>`:'<td class="none">—</td>')+'</tr>'};
   $('#guilds').innerHTML=head+'<tbody>'+vis.map(tr).join('')+'</tbody>';
   $('#mcards').innerHTML=vis.map(g=>{const isMe=me&&me.guild===g.guild&&me.realm===g.realm;const cells=g.pulls.map((p,i)=>{const b=D.bosses[i];if(p!==null&&p!==undefined)return`<div><em>${bossKey(b)}</em><b class="${p===0?'none':''}">${p}</b></div>`;const pr=g.progress[i];return pr&&pr[0]?`<div><em>${bossKey(b)}</em><b class="prog">${pr[0]}·${Math.round(pr[1])}%</b></div>`:`<div><em>${bossKey(b)}</em><b class="none">—</b></div>`});
-    if(nym.has(g.guild+'|'+g.realm))cells.push(`<div><em>浪縛</em><b>${nym.get(g.guild+'|'+g.realm)}</b></div>`);
+    if(nym.has(g.guild+'|'+g.realm)){const nr=nym.get(g.guild+'|'+g.realm);cells.push(`<div><em>浪縛</em><b class="${gview==='ilvl'&&!nr.ilvl?'none':''}">${gview==='ilvl'?(nr.ilvl??'—'):nr.pulls}</b></div>`)}
     return`<div class="mcard ${isMe?'me':''}"><div class="h"><b>#${g.rank} ${g.guild} <span>${g.region} · ${g.realm}</span></b><span>${g.previous_rank?`上版 ${g.previous_rank}${delta(g)}`:''}</span></div><div class="g">${cells.join('')}</div></div>`}).join('');
   $('#more').innerHTML=rows.length>shown?`<button id="moreBtn">顯示更多（還有 ${rows.length-shown} 個公會）</button>`:`<span class="hint">${rows.length} 個公會</span>`;
   const mb=$('#moreBtn');if(mb)mb.onclick=()=>{shown+=100;drawGuilds()};
