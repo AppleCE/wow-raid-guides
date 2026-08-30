@@ -275,18 +275,21 @@ function buildTabs(){const tabs=$('#tabs');const list=mode==='buckets'?D.buckets
 function drawChart(){
   const isIl=metric==='ilvl';
   $('#chartTitle').textContent=(isIl?'各王擊殺時的平均裝等':'各王擊殺前拉了幾把')+(mode==='buckets'?`（世界排名 ${bucket}）`:`（該王 ${bucket} 的公會）`);
-  const rows=D.bosses.map(b=>{const st=(b[mode]||{})[bucket];return{b,s:isIl?(st&&st.ilvl):st}}).filter(r=>r.s);
-  const missing=D.bosses.filter(b=>!(b[mode]||{})[bucket]);
+  const rows=D.bosses.map(b=>{const st=(b[mode]||{})[bucket];return{b,s:isIl?(st&&st.ilvl):st}});
+  const available=rows.filter(r=>r.s);
+  const missing=rows.filter(r=>!r.s).map(r=>r.b);
   const mobile=innerWidth<900,W=mobile?360:1296,padL=mobile?0:200,padR=mobile?0:70,rowH=mobile?54:48,padT=mobile?8:14,padB=30,H=padT+padB+rows.length*rowH;
   let lo=0,nice,x;
-  if(isIl){const mn=Math.min(...rows.map(r=>r.s.p25)),mx=Math.max(...rows.map(r=>r.s.p75));lo=Math.floor((mn-2)/5)*5;nice=Math.ceil((mx+2)/5)*5;x=v=>padL+(W-padL-padR)*(v-lo)/(nice-lo)}
-  else{const max=Math.max(10,...rows.map(r=>r.s.max));nice=Math.ceil(max/12)*12;x=v=>padL+(W-padL-padR)*v/nice}
+  if(isIl&&available.length){const mn=Math.min(...available.map(r=>r.s.p25)),mx=Math.max(...available.map(r=>r.s.p75));lo=Math.floor((mn-2)/5)*5;nice=Math.ceil((mx+2)/5)*5;x=v=>padL+(W-padL-padR)*(v-lo)/(nice-lo)}
+  else if(isIl){nice=5;x=v=>padL+(W-padL-padR)*v/nice}
+  else{const max=Math.max(10,...available.map(r=>r.s.max));nice=Math.ceil(max/12)*12;x=v=>padL+(W-padL-padR)*v/nice}
   const step=isIl?5:nice/6;
   let s=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="各王拓荒統計區間">`;
   for(let t=lo;t<=nice+0.01;t+=step){s+=`<line class="axis" x1="${x(t)}" y1="${padT}" x2="${x(t)}" y2="${H-padB+4}"/><text class="tick" x="${x(t)}" y="${H-padB+18}" text-anchor="middle">${Math.round(t)}</text>`}
   rows.forEach((r,i)=>{const st=r.s,y=padT+i*rowH+(mobile?rowH-14:rowH/2);
-    if(mobile)s+=`<text class="rowl" x="0" y="${padT+i*rowH+14}">${r.b.short}</text><text class="val" x="${W}" y="${padT+i*rowH+14}" text-anchor="end">中位 ${fmt(st.median)} · ${st.n} 團</text>`;
+    if(mobile)s+=`<text class="rowl" x="0" y="${padT+i*rowH+14}">${r.b.short}</text><text class="val" x="${W}" y="${padT+i*rowH+14}" text-anchor="end">${st?`中位 ${fmt(st.median)} · ${st.n} 團`:'— 尚無樣本'}</text>`;
     else s+=`<text class="rowl" x="${padL-14}" y="${y+4}" text-anchor="end">${r.b.short}</text>`;
+    if(!st){if(!mobile)s+=`<text class="val" x="${padL+12}" y="${y+4}">— 尚無擊殺樣本</text>`;return}
     s+=`<rect x="${x(st.p25)}" y="${y-9}" width="${Math.max(3,x(st.p75)-x(st.p25))}" height="18" rx="4" fill="var(--band)"/><rect x="${x(st.median)-1.5}" y="${y-13}" width="3" height="26" rx="1" fill="var(--median)"/><circle cx="${x(st.mean)}" cy="${y}" r="5" fill="var(--mean)" stroke="var(--card)" stroke-width="2"/>`;
     if(!mobile)s+=`<text class="val" x="${x(Math.max(st.p75,st.mean))+12}" y="${y+4}">中位 ${fmt(st.median)} · 平均 ${fmt(st.mean)} · ${st.n} 團</text>`;
     s+=`<rect class="hit" x="0" y="${padT+i*rowH}" width="${W}" height="${rowH}" data-i="${i}"/>`});
