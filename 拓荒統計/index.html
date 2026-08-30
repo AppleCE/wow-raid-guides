@@ -177,12 +177,12 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
     <div class="toolbar">
       <div>
         <h2>前 500 公會逐王把數</h2>
-        <p class="hint">數字＝擊殺用的把數，底色越深＝比同段中位數多越多；灰字＝還在打（把數 · 最佳%）；— ＝還沒拉。上版＝MN Tier 1 世界排名。</p>
+        <p class="hint">可依互斥的世界排名區間篩選。數字＝擊殺用的把數，底色越深＝比同段中位數多越多；灰字＝還在打（把數 · 最佳%）；— ＝還沒拉。上版＝MN Tier 1 世界排名。</p>
       </div>
       <div class="ctl">
         <div class="box"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#8b8983" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input id="q" placeholder="搜尋公會／伺服器" aria-label="搜尋"></div>
         <div class="seg light" id="region"></div>
-        <div class="seg light" id="limit"><button data-v="50">前 50</button><button data-v="100">前 100</button><button data-v="500" aria-pressed="true">前 500</button></div>
+        <div class="seg light" id="rankBand"><button data-v="" aria-pressed="true">全部</button><button data-v="前 50">前 50</button><button data-v="51–100">51–100</button><button data-v="101–200">101–200</button><button data-v="201–400">201–400</button><button data-v="401–500">401–500</button></div>
         <div class="seg light" id="gview"><button data-v="pulls" aria-pressed="true">把數</button><button data-v="ilvl" aria-pressed="false">擊殺裝等</button></div>
       </div>
     </div>
@@ -200,7 +200,7 @@ const tip=$('#tip');
 const showTip=(e,h)=>{tip.innerHTML=h;tip.style.display='block';moveTip(e)};
 const moveTip=e=>{tip.style.left=Math.min(e.clientX+14,innerWidth-280)+'px';tip.style.top=Math.min(e.clientY+14,innerHeight-90)+'px'};
 const hideTip=()=>tip.style.display='none';
-let D=null,mode='buckets',metric='pulls',bucket=null,region='',limit=500,shown=60,me=null,gview='pulls';
+let D=null,mode='buckets',metric='pulls',bucket=null,region='',rankBand='',shown=60,me=null,gview='pulls';
 const bossKey=b=>b.short.split(' ')[0];
 const binRange=label=>{const m=label.match(/(\d+)\s*[–-]\s*(\d+)/);if(m)return[+m[1],+m[2]];const n=label.match(/(\d+)/);return n?[1,+n[1]]:[1,1e9]};
 const binOf=rank=>D.buckets.find(l=>{const[a,b]=binRange(l);return rank>=a&&rank<=b});
@@ -216,7 +216,7 @@ function init(){
   seg('#metric',v=>{metric=v;drawChart()});
   seg('#gview',v=>{gview=v;drawGuilds()});
   seg('#region',v=>{region=v;shown=60;drawGuilds()});
-  seg('#limit',v=>{limit=+v;shown=60;drawGuilds()});
+  seg('#rankBand',v=>{rankBand=v;shown=60;drawGuilds()});
   buildTabs();drawChart();drawTables();drawGuilds();
   $('#q').addEventListener('input',()=>{shown=60;drawGuilds()});
   setupFind();
@@ -307,7 +307,7 @@ function drawTables(){
 function shade(pulls,st){if(!st||!pulls)return'';const d=pulls-st.median;if(d<=0)return'';const r=d/Math.max(1,st.p75-st.median);return r<1?'background:var(--cell-1)':r<2?'background:var(--cell-2)':'background:var(--cell-3)'}
 function drawGuilds(){
   const q=$('#q').value.trim().toLowerCase();
-  const rows=D.guilds.filter(g=>g.rank<=limit&&(!region||g.region===region)&&(!q||(g.guild+' '+g.realm).toLowerCase().includes(q)));
+  const rows=D.guilds.filter(g=>(!rankBand||binOf(g.rank)===rankBand)&&(!region||g.region===region)&&(!q||(g.guild+' '+g.realm).toLowerCase().includes(q)));
   const nb=D.guilds[0]?D.guilds[0].pulls.length:D.bosses.length;
   const nym=new Map((D.nymrissa||[]).map(n=>[n.guild+'|'+n.realm,n]));
   const head='<thead><tr><th>#</th><th>上版</th><th class="l">公會</th><th class="l">區域 · 伺服器</th><th>殺</th>'+D.bosses.slice(0,nb).map(b=>`<th>${bossKey(b)}</th>`).join('')+'<th>浪縛</th></tr></thead>';
