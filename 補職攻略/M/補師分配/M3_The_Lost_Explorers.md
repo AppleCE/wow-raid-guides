@@ -1,6 +1,6 @@
 # M3 The Lost Explorers－補師分配
 
-> 最後更新：2026-08-28（Asia/Taipei）
+> 最後更新：2026-08-31（Asia/Taipei）
 >
 > 戰術：先知 → 大副 → 商人；四補
 
