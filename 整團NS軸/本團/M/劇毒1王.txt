@@ -6,6 +6,7 @@ Arielle
 豆腐天尊
 intend
 time:4;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
+time:15;ph:1;text:精華撕裂低血離團：愛麗犧牲祝福主責，小鄭守護聖靈備援，豆腐護繭第二備援;TTS:true;dur:10;
 time:34;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
 time:40;ph:1;text:A組準備下井：豆腐跟組；回音集火、詛咒必斷;TTS:true;dur:8;
 time:75;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:8;
@@ -15,13 +16,15 @@ time:115;ph:1;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:5;
 time:178;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
 time:180;ph:1;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
 time:182;ph:1;text:A組準備下井；全團個減，彈幕路徑勿擋;TTS:true;dur:8;
+time:5;ph:2;text:外圈帶火者離團：未下井的菈菈或豆腐主顧；低血菈菈鐵樹皮，豆腐護繭備援;TTS:true;dur:10;
 time:20;ph:2;text:B組準備下井；轉場同時守怪與燒屍;TTS:true;dur:8;
 time:44;ph:2;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:5;
 time:45;ph:2;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
-time:101;ph:2;text:A組準備下井；外圈帶火者由未下井機動補照顧;TTS:true;dur:8;
 time:93;ph:2;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
+time:101;ph:2;text:A組準備下井；外圈帶火者由未下井機動補照顧;TTS:true;dur:8;
 time:113;ph:2;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:8;
 time:128;ph:2;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:5;
+time:10;ph:3;text:高層坦疊彈幕或攫取：愛麗犧牲祝福，小鄭守護聖靈備援，豆腐護繭第二備援;TTS:true;dur:10;
 time:26;ph:3;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:5;
 time:28;ph:3;text:B組準備下井；P2開嗜血，祈求前停引導;TTS:true;dur:8;
 time:33;ph:3;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
