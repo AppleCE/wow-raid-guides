@@ -2,7 +2,7 @@
 
 這是一套給團隊實戰使用的治療資料：先讀首領頁理解「為什麼這裡危險」，再看自己的補職頁，最後把 NS 軸匯入遊戲。
 
-版本：正式服 `12.1.0`。最後整理：`2026-08-29（Asia/Taipei）`。
+版本：正式服 `12.1.0`。最後整理：`2026-08-31（Asia/Taipei）`。
 
 ## 從這裡開始
 
@@ -21,7 +21,7 @@
 | 範圍 | 完整攻略 | 治療分析 | 補職攻略 | 個人 NS | 本團 NS |
 | --- | --- | --- | --- | --- | --- |
 | 浪縛單王 H | 待補 | 完成 | 完成 | 補薩／龍補 | 一／二團草案 |
-| 浪縛單王 M | 分析中 | 機制與治療模型已建 | 22–25 人五補：原四補＋Raitoningu | 尚未排軸 | 尚未排軸 |
+| 浪縛單王 M | 完成 | 熱修後治療模型與六補參考完成 | 25 人六補分配完成 | 以整團 NS 為準 | 六補 synthesized draft，待本團 WCL 校準 |
 | 劇毒 H1–H2 | 待補 | 完成 | 完成 | 補薩／龍補 | 一／二團草案 |
 | 劇毒 H3–H5 | 待補 | 完成 | 完成 | 補薩／龍補 | H3–H5 完成草案 |
 | 劇毒 H6–H7 | 完成 | 完成 | 完成 | 補薩／龍補 | H6–H7 完成草案 |
@@ -37,6 +37,7 @@
 
 ## 完整首領攻略
 
+- [浪縛單王 M：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/M/完整攻略.md)
 - [劇毒 1 王 M：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/M/完整攻略.md)
 - [劇毒 2 王 M：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/M/完整攻略.md)
 - [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/完整攻略.md)
@@ -52,6 +53,7 @@
 
 ## 每王治療分析
 
+- [浪縛單王 M：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/M/治療分析.md)
 - [劇毒 1 王 M：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/M/治療分析.md)
 - [劇毒 2 王 M：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/M/治療分析.md)
 - [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/治療分析.md)
