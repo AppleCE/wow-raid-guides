@@ -160,6 +160,15 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
     <div class="kill-grid" id="killCounts"></div>
   </section>
 
+  <section class="card" id="routeCard" hidden>
+    <div><h2>世界王路線追蹤</h2><p class="hint" id="routeNote"></p></div>
+    <div class="kill-grid" id="routeCounts"></div>
+    <details>
+      <summary id="directRouteSummary">查看目前先過世界王、M1／M3 均未殺的公會</summary>
+      <div class="wrap"><table id="directRouteGuilds"></table></div>
+    </details>
+  </section>
+
   <section class="card">
     <div class="toolbar">
       <div>
@@ -227,6 +236,22 @@ function init(){
   const order=b=>b.name==='Nymrissa Wavecaller'?0:+((b.short.match(/^M(\d+)/)||[])[1]||99);
   $('#killCounts').innerHTML=[...D.bosses].sort((a,b)=>order(a)-order(b)).map(b=>`<div class="kill-box"><span>${b.short}</span><b>${b.world_killed_guilds??'—'}</b><small>${b.world_kill_source||'尚未更新'}</small></div>`).join('');
   if(D.world_kills_checked_at)$('#killCountNote').textContent+=` 同次更新：${D.world_kills_checked_at}（台北時間）。`;
+  const route=D.world_boss_routes;
+  if(route){
+    $('#routeCard').hidden=false;
+    const known=route.m2_known_order||0, first=route.nymrissa_before_m2||0;
+    const pct=known?(first/known*100).toFixed(1):'—';
+    $('#routeNote').textContent='順序只計有 firstDefeated 時間的公會；M1／M3 與主團本零首殺為更新當下狀態。每日快照可回看變化。';
+    $('#routeCounts').innerHTML=[
+      ['先世界王 → M2',first,`已知順序 ${known} 團 · ${pct}%`],
+      ['世界王已殺、M2 未殺',route.nymrissa_killed_m2_not_yet,'可能接著轉打 M2'],
+      ['M1／M3 均未殺',route.m1_m3_both_not_killed,'先過世界王'],
+      ['主團本零首殺',route.no_main_boss_kills,'世界王已殺']
+    ].map(x=>`<div class="kill-box"><span>${x[0]}</span><b>${x[1]}</b><small>${x[2]}</small></div>`).join('');
+    const direct=route.direct_world_boss_guilds||[];
+    $('#directRouteSummary').textContent=`查看目前先過世界王、M1／M3 均未殺的 ${direct.length} 個公會`;
+    $('#directRouteGuilds').innerHTML='<thead><tr><th>世界王排名</th><th>公會</th><th>區域／伺服器</th><th>主團本排名</th><th>主團本首殺</th></tr></thead><tbody>'+direct.map(g=>`<tr><td>#${g.world_boss_rank}</td><td>${g.guild}</td><td>${g.region} · ${g.realm}</td><td>${g.main_raid_rank?'#'+g.main_raid_rank:'無條目'}</td><td>${g.main_boss_kills}</td></tr>`).join('')+'</tbody>';
+  }
   const regs=[...new Set(D.guilds.map(g=>g.region))].sort();
   $('#region').innerHTML='<button data-v="" aria-pressed="true">全部</button>'+regs.map(r=>`<button data-v="${r}" aria-pressed="false">${r}</button>`).join('');
   seg('#mode',v=>{mode=v;buildTabs();drawChart()});
