@@ -43,5 +43,5 @@ time:78;ph:4;text:收尾拉齊三王血量；餵魚順序不是擊殺順序，�
 time:82;ph:4;text:最後箱子第12輪：25秒內2加2加2；除非王先死，否則六箱全部開完;TTS:true;dur:10;
 time:94;ph:4;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:5;
 time:99;ph:4;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
-time:105;ph:4;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:5;
+time:108;ph:4;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:5;
 time:111;ph:4;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:10;
