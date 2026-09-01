@@ -1,5 +1,5 @@
 EncounterID:3445;Name:本團 劇毒 傳奇 2王 墓封哨兵 四補;Difficulty:Mythic
-time:10;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
+time:2;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
 time:22;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:5;
 time:30;ph:1;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:5;
 time:50;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:8;
@@ -9,7 +9,7 @@ time:23;ph:2;tag:豆腐天尊;spellid:115310;text:五氣歸元;TTS:true;dur:6;
 time:25;ph:2;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
 time:25;ph:2;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:6;
 time:28;ph:2;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:5;
-time:75;ph:2;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
+time:67;ph:2;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
 time:89;ph:2;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:5;
 time:16;ph:3;tag:呆小鄭;spellid:200183;text:神化;TTS:true;dur:5;
 time:20;ph:3;tag:豆腐天尊;spellid:443028;text:天尊導體;TTS:true;dur:5;
@@ -17,7 +17,7 @@ time:40;ph:3;tag:Arielle;spellid:31884;text:復仇之怒;TTS:true;dur:5;
 time:45;ph:3;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:5;
 time:71;ph:3;tag:呆小鄭;spellid:64843;text:神聖禮頌;TTS:true;dur:6;
 time:75;ph:3;tag:菈菈跳來跳去;spellid:740;text:寧靜;TTS:true;dur:8;
-time:94;ph:3;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
+time:79;ph:3;tag:豆腐天尊;spellid:322118;text:召喚玉龍;TTS:true;dur:5;
 time:17;ph:4;tag:Arielle;spellid:31821;text:精通光環;TTS:true;dur:5;
 time:19;ph:4;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;TTS:true;dur:5;
 time:19;ph:4;tag:豆腐天尊;spellid:443028;text:天尊導體;TTS:true;dur:5;
