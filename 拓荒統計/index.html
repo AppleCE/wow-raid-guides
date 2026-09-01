@@ -139,7 +139,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
   <section class="hero">
     <div class="hero-copy">
       <h2>仍在拓荒前線的王，你這段平均拉幾把？</h2>
-      <p>先找到自己的公會，頁面會比較仍在詳細追蹤首領的把數與同段中位數。M1、M3、浪縛單王及世界過王數超過 500 團的首領，只保留過王團數。</p>
+      <p>先找到自己的公會，頁面會比較仍在詳細追蹤首領的把數與同段中位數。停止詳細追蹤後，過王團數繼續更新，先前的把數與裝等彙總快照仍保留。</p>
       <div class="search">
         <div class="box">
           <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="#8b8983" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg>
@@ -188,7 +188,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
     <div class="toolbar">
       <div>
         <h2>前 500 公會：仍在詳細追蹤的王</h2>
-        <p class="hint">M1、M3、浪縛單王及世界過王數超過 500 團的首領不列把數與裝等。其餘數字＝擊殺把數；灰字＝還在打（把數 · 最佳%）。</p>
+        <p class="hint">逐公會資料只顯示仍在更新明細的首領；已停止的首領仍可在上方圖表與分段表查看最後彙總快照。</p>
       </div>
       <div class="ctl">
         <div class="box"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#8b8983" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input id="q" placeholder="搜尋公會／伺服器" aria-label="搜尋"></div>
@@ -212,7 +212,7 @@ const showTip=(e,h)=>{tip.innerHTML=h;tip.style.display='block';moveTip(e)};
 const moveTip=e=>{tip.style.left=Math.min(e.clientX+14,innerWidth-280)+'px';tip.style.top=Math.min(e.clientY+14,innerHeight-90)+'px'};
 const hideTip=()=>tip.style.display='none';
 let D=null,mode='buckets',metric='pulls',bucket=null,region='',rankBand='',shown=60,me=null,gview='pulls';
-const detailBosses=()=>D.bosses.filter(b=>b.detail_enabled!==false);
+const detailBosses=()=>D.bosses.filter(b=>b.detail_available!==false&&Object.values(b.buckets||{}).some(x=>x));
 const bossKey=b=>b.short.split(' ')[0];
 const binRange=label=>{const m=label.match(/(\d+)\s*[–-]\s*(\d+)/);if(m)return[+m[1],+m[2]];const n=label.match(/(\d+)/);return n?[1,+n[1]]:[1,1e9]};
 const binOf=rank=>D.buckets.find(l=>{const[a,b]=binRange(l);return rank>=a&&rank<=b});
@@ -223,7 +223,7 @@ fetch('data/latest.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;buck
 function init(){
   $('#meta').textContent=`最後更新：${D.checked_at}（台北時間） · 前 ${D.top} 公會 · 對到 ${D.resolved}`;
   const order=b=>b.name==='Nymrissa Wavecaller'?0:+((b.short.match(/^M(\d+)/)||[])[1]||99);
-  $('#killCounts').innerHTML=[...D.bosses].sort((a,b)=>order(a)-order(b)).map(b=>`<div class="kill-box"><span>${b.short}</span><b>${b.world_killed_guilds??'—'}</b><small>${b.tracking_frozen?'已停止更新':(b.detail_enabled===false?'只統計過王團數':(b.world_kill_source||'尚未更新'))}</small></div>`).join('');
+  $('#killCounts').innerHTML=[...D.bosses].sort((a,b)=>order(a)-order(b)).map(b=>`<div class="kill-box"><span>${b.short}</span><b>${b.world_killed_guilds??'—'}</b><small>${b.detail_updating===false?'過王數持續；明細已封存':(b.world_kill_source||'尚未更新')}</small></div>`).join('');
   if(D.world_kills_checked_at)$('#killCountNote').textContent+=` 同次更新：${D.world_kills_checked_at}（台北時間）。`;
   const regs=[...new Set(D.guilds.map(g=>g.region))].sort();
   $('#region').innerHTML='<button data-v="" aria-pressed="true">全部</button>'+regs.map(r=>`<button data-v="${r}" aria-pressed="false">${r}</button>`).join('');
@@ -235,7 +235,7 @@ function init(){
   buildTabs();drawChart();drawTables();drawGuilds();
   $('#q').addEventListener('input',()=>{shown=60;drawGuilds()});
   setupFind();
-  $('#about').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 世界進度榜</a>（名單、上版排名）、Warcraft Logs 進度 API（M1–M8 過王團數與前線王把數）、raider.io Live Tracking（WCL 沒有時補）。浪縛單王已停止更新。原始資料 <a href="data/latest.json">data/latest.json</a>、每次快照 <a href="history/">history/</a>。`;
+  $('#about').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 世界進度榜</a>（名單、上版排名）、Warcraft Logs 進度 API（M1–M8 過王團數與前線王把數）、raider.io Live Tracking（WCL 沒有時補）。浪縛以 Raider.IO 世界傳奇榜更新過王數；已封存明細保留停止前快照。原始資料 <a href="data/latest.json">data/latest.json</a>、每次快照 <a href="history/">history/</a>。`;
   const h=location.hash.slice(1);if(h){const g=D.guilds.find(x=>x.guild===decodeURIComponent(h));if(g){$('#find').value=g.guild;selectGuild(g)}}
 }
 function seg(sel,cb){const el=$(sel);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...el.children].forEach(c=>c.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');cb(b.dataset.v)})}
@@ -308,7 +308,8 @@ function drawChart(){
     s+=`<rect class="hit" x="0" y="${padT+i*rowH}" width="${W}" height="${rowH}" data-i="${i}"/>`});
   s+='</svg>';$('#chart').innerHTML=s;
   $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i],st=r.s;const u=isIl?'':' 把';const html=`<b>${r.b.short}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75}${u}<br>中位數 ${fmt(st.median)}・平均 ${fmt(st.mean)}${st.max!==undefined?`<br>最多 ${st.max}${u}`:''}`;h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
-  $('#chartFoot').innerHTML=missing.map(b=>{const ip=b.in_progress;return`<div>${b.short}：${b.killed_guilds?`此段無擊殺樣本（共 ${b.killed_guilds} 團已殺）`:'無擊殺'}${ip?`；${ip.n} 團還在打，平均 ${fmt(ip.mean_pulls)} 把、最佳 ${Math.round(ip.median_best)}%`:b.killed_guilds?'':'；尚無公會開拉'}</div>`}).join('');
+  const frozen=detailBosses().filter(b=>b.detail_frozen).map(b=>`<div>${b.short}：明細停在 ${b.detail_checked_at||'日期不明'}（當時 ${b.detail_snapshot_world_kills??'—'} 團）；過王總數仍持續更新。</div>`);
+  $('#chartFoot').innerHTML=frozen.join('')+missing.map(b=>{const ip=b.in_progress;return`<div>${b.short}：${b.killed_guilds?`此段無擊殺樣本（共 ${b.killed_guilds} 團已殺）`:'無擊殺'}${ip?`；${ip.n} 團還在打，平均 ${fmt(ip.mean_pulls)} 把、最佳 ${Math.round(ip.median_best)}%`:b.killed_guilds?'':'；尚無公會開拉'}</div>`}).join('');
 }
 addEventListener('resize',()=>{if(D)drawChart()});
 
