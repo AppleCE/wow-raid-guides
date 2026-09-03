@@ -29,7 +29,8 @@
 | 劇毒 M1 | 完成 | 8:54 指定 M 場重建完成 | 四補分工完成 | 併入角色頁 | 四補 draft 完成 |
 | 劇毒 M2 | 指定 WCL 新流程重建完成 | 8/29 舊模型待新流程重建 | 舊分邊草案待重建 | 待治療模型 | 待治療模型 |
 | 劇毒 M3 | 完成 | 先知先精確傷害窗重算完成 | 四補完成 | 四補完成 | 先知先四補 NS 完成，待本團 WCL 微調 |
-| 劇毒 M4–M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
+| 劇毒 M4 | 完成（mechanics-ready） | 待建立 | 待建立 | 待建立 | 待建立 |
+| 劇毒 M5–M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
 
 「完成」表示已有當前版本機制與可用 WCL 骨架，不表示補軸永久定案；取得本團拓荒 WCL 後仍會逐波復盤。
 
@@ -41,6 +42,7 @@
 - [劇毒 1 王 M：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/M/完整攻略.md)
 - [劇毒 2 王 M：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/M/完整攻略.md)
 - [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/完整攻略.md)
+- [劇毒 4 王 M：Vashnik the Malignant](首領/劇毒4王_Vashnik_the_Malignant/M/完整攻略.md)
 - [劇毒 6 王 H：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/H/完整攻略.md)
 - [劇毒 7 王 H：The Coiled Altar](首領/劇毒7王_The_Coiled_Altar/H/完整攻略.md)
 - [劇毒 8 王 H：Ula'tek](首領/劇毒8王_Ulatek/H/完整攻略.md)
