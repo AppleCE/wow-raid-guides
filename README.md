@@ -2,7 +2,7 @@
 
 這是一套給團隊實戰使用的治療資料：先讀首領頁理解「為什麼這裡危險」，再看自己的補職頁，最後把 NS 軸匯入遊戲。
 
-版本：正式服 `12.1.0`。最後整理：`2026-08-31（Asia/Taipei）`。
+版本：正式服 `12.1.0`。最後整理：`2026-09-03（Asia/Taipei）`。
 
 ## 從這裡開始
 
@@ -29,7 +29,7 @@
 | 劇毒 M1 | 完成 | 8:54 指定 M 場重建完成 | 四補分工完成 | 併入角色頁 | 四補 draft 完成 |
 | 劇毒 M2 | 指定 WCL 新流程重建完成 | 8/29 舊模型待新流程重建 | 舊分邊草案待重建 | 待治療模型 | 待治療模型 |
 | 劇毒 M3 | 完成 | 先知先精確傷害窗重算完成 | 四補完成 | 四補完成 | 先知先四補 NS 完成，待本團 WCL 微調 |
-| 劇毒 M4 | 完成（mechanics-ready） | 待建立 | 待建立 | 待建立 | 待建立 |
+| 劇毒 M4 | 完成（mechanics-ready） | 修正後暗火治療模型完成 | 待建立 | 待建立 | 待建立 |
 | 劇毒 M5–M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
 
 「完成」表示已有當前版本機制與可用 WCL 骨架，不表示補軸永久定案；取得本團拓荒 WCL 後仍會逐波復盤。
@@ -59,6 +59,7 @@
 - [劇毒 1 王 M：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/M/治療分析.md)
 - [劇毒 2 王 M：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/M/治療分析.md)
 - [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/治療分析.md)
+- [劇毒 4 王 M：Vashnik the Malignant](首領/劇毒4王_Vashnik_the_Malignant/M/治療分析.md)
 - [浪縛單王 H：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/H/治療分析.md)
 - [劇毒 1 王 H：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/H/治療分析.md)
 - [劇毒 2 王 H：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/H/治療分析.md)
