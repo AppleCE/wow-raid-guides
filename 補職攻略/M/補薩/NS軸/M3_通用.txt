@@ -2,5 +2,5 @@ EncounterID:3497;Name:劇毒 傳奇 3王 補薩個人通用 先知先;Difficulty
 time:37;ph:1;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
 time:10;ph:3;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
 time:35;ph:3;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
-time:74;ph:4;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
+time:94;ph:4;tag:補薩;spellid:114052;text:卓越術;TTS:true;dur:5;
 time:99;ph:4;tag:補薩;spellid:98008;text:靈魂連結圖騰;TTS:true;dur:5;
