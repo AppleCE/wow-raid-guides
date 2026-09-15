@@ -17,5 +17,6 @@
 | [劇毒 M1 Nek'zali](../../首領/劇毒1王_Nekzali_the_Soulcoiler/M/完整攻略.md) | `draft` | [治療分析](../../首領/劇毒1王_Nekzali_the_Soulcoiler/M/治療分析.md)｜[四補分配](補師分配/M1_Nekzali.md)｜[整團時間軸](../../整團時間軸/M/劇毒1王.md)｜[四補 NS](../../整團NS軸/本團/M/劇毒1王.txt)；鎖定 `C2k...` fight 4 |
 | [劇毒 M2 Entombed Sentinels](../../首領/劇毒2王_Entombed_Sentinels/M/完整攻略.md) | `draft` | [治療分析](../../首領/劇毒2王_Entombed_Sentinels/M/治療分析.md)｜[四補分配](補師分配/M2_Entombed_Sentinels.md)｜[整團時間軸](../../整團時間軸/M/劇毒2王.md)｜[四補 NS](../../整團NS軸/本團/M/劇毒2王.txt)；鎖定 Google `g4j...` fight 11 與最終分邊 |
 | [劇毒 M3 The Lost Explorers](../../首領/劇毒3王_The_Lost_Explorers/M/完整攻略.md) | `draft` | 固定先知 → 大副 → 商人；[治療分析](../../首領/劇毒3王_The_Lost_Explorers/M/治療分析.md)｜[四補分配](補師分配/M3_The_Lost_Explorers.md)｜[整團時間軸](../../整團時間軸/M/劇毒3王.md)｜[四補 NS](../../整團NS軸/本團/M/劇毒3王.txt) |
+| [劇毒 M6 The Twin Fangs](../../首領/劇毒6王_The_Twin_Fangs/M/完整攻略.md) | `draft` | [治療分析](../../首領/劇毒6王_The_Twin_Fangs/M/治療分析.md)｜[四補分配](補師分配/M6_The_Twin_Fangs.md)｜[整團時間軸](../../整團時間軸/M/劇毒6王.md)｜[四補 NS](../../整團NS軸/本團/M/劇毒6王.txt)；Google 固定減傷不改，最後長場待實測 |
 
 M1、M2 與 M3 使用不同戰鬥流程與 phase 起點；即使四補相同，也不得互相複製原始秒數。M2 另須把每個補招按左右半場判定，另一側範圍補招不算覆蓋。
