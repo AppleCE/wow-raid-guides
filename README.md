@@ -45,6 +45,7 @@
 - [劇毒 2 王 M：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/M/完整攻略.md)
 - [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/完整攻略.md)
 - [劇毒 4 王 M：Vashnik the Malignant](首領/劇毒4王_Vashnik_the_Malignant/M/完整攻略.md)
+- [劇毒 5 王 M：Sszorak](首領/劇毒5王_Sszorak/M/完整攻略.md)
 - [劇毒 6 王 M：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/M/完整攻略.md)
 - [劇毒 6 王 H：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/H/完整攻略.md)
 - [劇毒 7 王 H：The Coiled Altar](首領/劇毒7王_The_Coiled_Altar/H/完整攻略.md)
