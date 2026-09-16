@@ -215,7 +215,9 @@ let D=null,mode='buckets',metric='pulls',bucket=null,region='',rankBand='',shown
 const detailBosses=()=>D.bosses.filter(b=>b.detail_available!==false&&Object.values(b.buckets||{}).some(x=>x));
 const bossKey=b=>b.short.split(' ')[0];
 const binRange=label=>{const m=label.match(/(\d+)\s*[–-]\s*(\d+)/);if(m)return[+m[1],+m[2]];const n=label.match(/(\d+)/);return n?[1,+n[1]]:[1,1e9]};
-const binOf=rank=>D.buckets.find(l=>{const[a,b]=binRange(l);return rank>=a&&rank<=b});
+const binOf=rank=>D.buckets.find(l=>{const[a,b]=binRange(l);return rank>=a&&rank<=b})||D.buckets[D.buckets.length-1];
+// 可搜尋的公會 = 取樣的前 N 名 + 排名在其外的地區補充公會（只供查詢比對，不進任何統計）
+const searchPool=()=>D.guilds.concat(D.region_guilds||[]);
 const fmt=v=>v===null||v===undefined?'':(Number.isInteger(v)?v:(+v).toFixed(1).replace(/\.0$/,''));
 
 fetch('data/latest.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;bucket=d.buckets[0];init()}).catch(e=>{$('#meta').textContent='資料載入失敗';$('#gcard').innerHTML='<div class="empty">資料載入失敗：'+e+'</div>'});
@@ -236,18 +238,18 @@ function init(){
   $('#q').addEventListener('input',()=>{shown=60;drawGuilds()});
   setupFind();
   $('#about').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 世界進度榜</a>（名單、上版排名）、Warcraft Logs 進度 API（M1–M8 過王團數與前線王把數）、raider.io Live Tracking（WCL 沒有時補）。浪縛以 Raider.IO 世界傳奇榜更新過王數；已封存明細保留停止前快照。原始資料 <a href="data/latest.json">data/latest.json</a>、每次快照 <a href="history/">history/</a>。`;
-  const h=location.hash.slice(1);if(h){const g=D.guilds.find(x=>x.guild===decodeURIComponent(h));if(g){$('#find').value=g.guild;selectGuild(g)}}
+  const h=location.hash.slice(1);if(h){const g=searchPool().find(x=>x.guild===decodeURIComponent(h));if(g){$('#find').value=g.guild;selectGuild(g)}}
 }
 function seg(sel,cb){const el=$(sel);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...el.children].forEach(c=>c.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');cb(b.dataset.v)})}
 
 /* ---------- find your guild ---------- */
 function setupFind(){
   const inp=$('#find'),box=$('#sugg');let cur=-1,list=[];
-  const render=()=>{box.innerHTML=list.map((g,i)=>`<div data-i="${i}" class="${i===cur?'on':''}"><span style="color:var(--ink)">#${g.rank} ${g.guild}</span><span>${g.region} · ${g.realm}</span></div>`).join('');box.style.display=list.length?'block':'none'};
-  inp.addEventListener('input',()=>{const q=inp.value.trim().toLowerCase();cur=-1;list=q?D.guilds.filter(g=>(g.guild+' '+g.realm).toLowerCase().includes(q)).slice(0,8):[];render()});
+  const render=()=>{box.innerHTML=list.map((g,i)=>`<div data-i="${i}" class="${i===cur?'on':''}"><span style="color:var(--ink)">${g.rank?'#'+g.rank:(g.region+' #'+g.region_rank)} ${g.guild}</span><span>${g.region} · ${g.realm}</span></div>`).join('');box.style.display=list.length?'block':'none'};
+  inp.addEventListener('input',()=>{const q=inp.value.trim().toLowerCase();cur=-1;list=q?searchPool().filter(g=>(g.guild+' '+g.realm).toLowerCase().includes(q)).slice(0,8):[];render()});
   inp.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){cur=Math.min(cur+1,list.length-1);render()}else if(e.key==='ArrowUp'){cur=Math.max(cur-1,0);render()}else if(e.key==='Enter'){e.preventDefault();pick(cur>=0?list[cur]:list[0])}else if(e.key==='Escape'){list=[];render()}});
   box.addEventListener('mousedown',e=>{const d=e.target.closest('div[data-i]');if(d)pick(list[+d.dataset.i])});
-  $('#findBtn').addEventListener('click',()=>pick(list[0]||D.guilds.find(g=>(g.guild+' '+g.realm).toLowerCase().includes(inp.value.trim().toLowerCase()))));
+  $('#findBtn').addEventListener('click',()=>pick(list[0]||searchPool().find(g=>(g.guild+' '+g.realm).toLowerCase().includes(inp.value.trim().toLowerCase()))));
   document.addEventListener('click',e=>{if(!e.target.closest('.search')){list=[];render()}});
   function pick(g){if(!g)return;inp.value=g.guild;list=[];render();selectGuild(g)}
 }
@@ -257,7 +259,7 @@ function selectGuild(g){
   const nb=g.pulls.length;
   let cards=D.bosses.slice(0,nb).map((b,i)=>({b,i})).filter(x=>x.b.detail_enabled!==false).map(x=>kpi(x.b,g.pulls[x.i],g.progress[x.i],bin,false,(g.ilvl||[])[x.i]));
   const prev=g.previous_rank?`<span class="chip">上版 #${g.previous_rank}${delta(g)}</span>`:'';
-  $('#gcard').innerHTML=`<div class="gc-head"><div class="gc-name"><b>${g.guild}</b><span>${g.region} · ${g.realm}</span></div><div class="chips"><span class="chip acc">世界 #${g.rank} · ${bin} 段</span>${prev}</div></div><div class="gc-grid">${cards.join('')}</div><p class="hint">同段＝世界排名 ${bin} 的公會；中位數只算已擊殺且有把數紀錄的公會。</p>`;
+  $('#gcard').innerHTML=`<div class="gc-head"><div class="gc-name"><b>${g.guild}</b><span>${g.region} · ${g.realm}</span></div><div class="chips"><span class="chip acc">${g.rank?'世界 #'+g.rank:'世界 '+D.top+' 名外'} · ${bin} 段</span>${g.src==='region'?`<span class="chip">${g.region} 區域 #${g.region_rank}</span>`:''}${prev}</div></div><div class="gc-grid">${cards.join('')}</div><p class="hint">同段＝世界排名 ${bin} 的公會；中位數只算已擊殺且有把數紀錄的公會。${g.src==='region'?`此團在世界前 ${D.top} 名之外，不列入統計，僅以 ${bin} 段作為比對基準。`:''}</p>`;
   drawGuilds();
 }
 function delta(g){if(!g.previous_rank)return'';const d=g.previous_rank-g.rank;return d>0?` <span class="up">▲${d}</span>`:d<0?` <span class="down">▼${-d}</span>`:''}
@@ -307,17 +309,17 @@ function drawChart(){
     if(!mobile)s+=`<text class="val" x="${x(Math.max(st.p75,st.mean))+12}" y="${y+4}">中位 ${fmt(st.median)} · 平均 ${fmt(st.mean)} · ${st.n} 團</text>`;
     s+=`<rect class="hit" x="0" y="${padT+i*rowH}" width="${W}" height="${rowH}" data-i="${i}"/>`});
   s+='</svg>';$('#chart').innerHTML=s;
-  $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i],st=r.s;const u=isIl?'':' 把';const html=`<b>${r.b.short}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75}${u}<br>中位數 ${fmt(st.median)}・平均 ${fmt(st.mean)}${st.max!==undefined?`<br>最多 ${st.max}${u}`:''}`;h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
+  $('#chart').querySelectorAll('.hit').forEach(h=>{const r=rows[+h.dataset.i],st=r.s;const u=isIl?'':' 把';const html=`<b>${r.b.short}</b><br>樣本 ${st.n} 個公會<br>25%–75%：${st.p25}–${st.p75}${u}<br>中位數 ${fmt(st.median)}・平均 ${fmt(st.mean)}${st.min!==undefined?`<br>最少 ${st.min}${u}`:''}${st.max!==undefined?`<br>最多 ${st.max}${u}`:''}`;h.addEventListener('mouseenter',e=>showTip(e,html));h.addEventListener('mousemove',moveTip);h.addEventListener('mouseleave',hideTip)});
   const frozen=detailBosses().filter(b=>b.detail_frozen).map(b=>`<div>${b.short}：明細停在 ${b.detail_checked_at||'日期不明'}（當時 ${b.detail_snapshot_world_kills??'—'} 團）；過王總數仍持續更新。</div>`);
   $('#chartFoot').innerHTML=frozen.join('')+missing.map(b=>{const ip=b.in_progress;return`<div>${b.short}：${b.killed_guilds?`此段無擊殺樣本（共 ${b.killed_guilds} 團已殺）`:'無擊殺'}${ip?`；${ip.n} 團還在打，平均 ${fmt(ip.mean_pulls)} 把、最佳 ${Math.round(ip.median_best)}%`:b.killed_guilds?'':'；尚無公會開拉'}</div>`}).join('');
 }
 addEventListener('resize',()=>{if(D)drawChart()});
 
 /* ---------- bin tables ---------- */
-const cell=s=>s?`<td>${fmt(s.median)} <span class="n">(${s.n})</span>${s.ilvl?`<div class="n">裝等 ${s.ilvl.mean}</div>`:''}</td>`:'<td class="none">—</td>';
+const cell=s=>s?`<td>${fmt(s.median)} <span class="n">(${s.n})</span><div class="n">${s.min!==undefined?`${s.min}–${s.max}`:''}</div>${s.ilvl?`<div class="n">裝等 ${s.ilvl.mean}</div>`:''}</td>`:'<td class="none">—</td>';
 function drawTables(){
   $('#t1').innerHTML='<thead><tr><th class="l">王</th>'+D.buckets.map(b=>`<th>${b}</th>`).join('')+'</tr></thead><tbody>'+detailBosses().filter(b=>Object.values(b.buckets||{}).some(x=>x)).map(b=>`<tr><td class="l">${b.short}</td>`+D.buckets.map(k=>cell(b.buckets[k])).join('')+'</tr>').join('')+'</tbody>';
-  $('#t2').innerHTML='<thead><tr><th class="l">王</th>'+D.order_buckets.map(b=>`<th>${orderLabel(b)}</th>`).join('')+'</tr></thead><tbody>'+detailBosses().filter(b=>b.order_buckets&&Object.values(b.order_buckets).some(x=>x)).map(b=>`<tr><td class="l">${b.short}</td>`+D.order_buckets.map(k=>{const s=b.order_buckets[k];return s?`<td>${fmt(s.median)}${s.n!==25?` <span class="n">(${s.n})</span>`:''}</td>`:'<td class="none">—</td>'}).join('')+'</tr>').join('')+'</tbody>';
+  $('#t2').innerHTML='<thead><tr><th class="l">王</th>'+D.order_buckets.map(b=>`<th>${orderLabel(b)}</th>`).join('')+'</tr></thead><tbody>'+detailBosses().filter(b=>b.order_buckets&&Object.values(b.order_buckets).some(x=>x)).map(b=>`<tr><td class="l">${b.short}</td>`+D.order_buckets.map(k=>{const s=b.order_buckets[k];return s?`<td>${fmt(s.median)}${s.n!==25?` <span class="n">(${s.n})</span>`:''}${s.min!==undefined?`<div class="n">${s.min}–${s.max}</div>`:''}</td>`:'<td class="none">—</td>'}).join('')+'</tr>').join('')+'</tbody>';
 }
 
 /* ---------- guild table ---------- */
