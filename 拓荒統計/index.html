@@ -257,8 +257,8 @@ function selectGuild(g){
   me=g;history.replaceState(null,'','#'+encodeURIComponent(g.guild));
   const bin=binOf(g.rank);
   const nb=g.pulls.length;
-  const showBoss=g.src==='region'?(b=>b.detail_available!==false):(b=>b.detail_enabled!==false);
-  let cards=D.bosses.slice(0,nb).map((b,i)=>({b,i})).filter(x=>showBoss(x.b)).map(x=>kpi(x.b,g.pulls[x.i],g.progress[x.i],bin,false,(g.ilvl||[])[x.i]));
+  // 比對一律列出 M1–M8；已封存的首領仍以其快照中位數作為比對基準。
+  let cards=D.bosses.slice(0,nb).map((b,i)=>({b,i})).filter(x=>x.b.detail_available!==false).map(x=>kpi(x.b,g.pulls[x.i],g.progress[x.i],bin,false,(g.ilvl||[])[x.i]));
   const prev=g.previous_rank?`<span class="chip">上版 #${g.previous_rank}${delta(g)}</span>`:'';
   $('#gcard').innerHTML=`<div class="gc-head"><div class="gc-name"><b>${g.guild}</b><span>${g.region} · ${g.realm}</span></div><div class="chips"><span class="chip acc">${g.rank?'世界 #'+g.rank:'世界 '+D.top+' 名外'} · ${bin} 段</span>${g.src==='region'?`<span class="chip">${g.region} 區域 #${g.region_rank}</span>`:''}${prev}</div></div><div class="gc-grid">${cards.join('')}</div><p class="hint">同段＝世界排名 ${bin} 的公會；中位數只算已擊殺且有把數紀錄的公會。${g.src==='region'?`此團在世界前 ${D.top} 名之外，不列入統計，僅以 ${bin} 段作為比對基準。`:''}</p>`;
   drawGuilds();
