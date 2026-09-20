@@ -2,7 +2,7 @@
 
 這是一套給團隊實戰使用的治療資料：先讀首領頁理解「為什麼這裡危險」，再看自己的補職頁，最後把 NS 軸匯入遊戲。
 
-版本：正式服 `12.1.0`。最後整理：`2026-09-15（Asia/Taipei）`。
+版本：正式服 `12.1.0`。最後整理：`2026-09-20（Asia/Taipei）`。
 
 ## 從這裡開始
 
@@ -32,7 +32,8 @@
 | 劇毒 M4 | 完成（mechanics-ready） | 修正後暗火治療模型完成 | 待建立 | 待建立 | 待建立 |
 | 劇毒 M5 | 完成 | 完成 | 四補完成 | 四補完成 | 四補 NS 已上線 |
 | 劇毒 M6 | 完成（mechanics-ready） | 治療模型完成 | 四補分工草案 | 併入角色頁 | Google 固定減傷＋四補 draft，待本團 WCL 校準 |
-| 劇毒 M7–M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
+| 劇毒 M7 | 熱修後通用草案，待本團打法核定 | 參考過王場治療模型草案 | 待建立 | 待建立 | 待建立 |
+| 劇毒 M8 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 | 隨進度新增 |
 
 「完成」表示已有當前版本機制與可用 WCL 骨架，不表示補軸永久定案；取得本團拓荒 WCL 後仍會逐波復盤。
 
@@ -47,6 +48,7 @@
 - [劇毒 4 王 M：Vashnik the Malignant](首領/劇毒4王_Vashnik_the_Malignant/M/完整攻略.md)
 - [劇毒 5 王 M：Sszorak](首領/劇毒5王_Sszorak/M/完整攻略.md)
 - [劇毒 6 王 M：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/M/完整攻略.md)
+- [劇毒 7 王 M：The Coiled Altar（通用草案）](首領/劇毒7王_The_Coiled_Altar/M/完整攻略.md)
 - [劇毒 6 王 H：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/H/完整攻略.md)
 - [劇毒 7 王 H：The Coiled Altar](首領/劇毒7王_The_Coiled_Altar/H/完整攻略.md)
 - [劇毒 8 王 H：Ula'tek](首領/劇毒8王_Ulatek/H/完整攻略.md)
@@ -65,6 +67,7 @@
 - [劇毒 3 王 M：The Lost Explorers](首領/劇毒3王_The_Lost_Explorers/M/治療分析.md)
 - [劇毒 4 王 M：Vashnik the Malignant](首領/劇毒4王_Vashnik_the_Malignant/M/治療分析.md)
 - [劇毒 6 王 M：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/M/治療分析.md)
+- [劇毒 7 王 M：The Coiled Altar（通用草案）](首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)
 - [浪縛單王 H：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/H/治療分析.md)
 - [劇毒 1 王 H：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/H/治療分析.md)
 - [劇毒 2 王 H：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/H/治療分析.md)
