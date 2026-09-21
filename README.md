@@ -69,6 +69,7 @@
 - [劇毒 4 王 M：Vashnik the Malignant](首領/劇毒4王_Vashnik_the_Malignant/M/治療分析.md)
 - [劇毒 6 王 M：The Twin Fangs](首領/劇毒6王_The_Twin_Fangs/M/治療分析.md)
 - [劇毒 7 王 M：The Coiled Altar（通用草案）](首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)
+- [劇毒 7 王 M：三團過王逐波治療實錄（各補師與點名對象）](首領/劇毒7王_The_Coiled_Altar/M/過王逐波治療實錄.md)
 - [浪縛單王 H：Nymrissa Wavecaller](首領/浪縛單王_Nymrissa_Wavecaller/H/治療分析.md)
 - [劇毒 1 王 H：Nek'zali the Soulcoiler](首領/劇毒1王_Nekzali_the_Soulcoiler/H/治療分析.md)
 - [劇毒 2 王 H：Entombed Sentinels](首領/劇毒2王_Entombed_Sentinels/H/治療分析.md)
