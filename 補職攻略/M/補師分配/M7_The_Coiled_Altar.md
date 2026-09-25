@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | **Arita** | 龍補 | 沿基礎場龍補：靜滯六組、時光倒轉約 2:09／7:52、輕風約 8:35；靜滯每組先存再釋放。 |
 | **菈菈跳來跳去** | 補德 | 沿基礎場補德：寧靜約 2:55／6:51／10:00；魂靈召集見整團軸。寧靜要有足夠站定位。 |
-| **呆小鄭** | 神牧 | **取另一場神牧**：神化五次、神聖禮頌約 1:02／4:08／6:48／8:53、守護聖靈約 1:34／8:38。前三次禮頌與基礎場團招相近，先按實際血線核對是否需要挪動；不照搬戒牧壁障或痛苦鎮壓。 |
+| **呆小鄭** | 神牧 | 神化五次、守護聖靈約 1:34／8:38 參照 ZJ f18；**禮頌取同節奏的 Boximilian pattern**，約 1:50／4:00／6:46／8:51。6:46 有神牧實際施放，2:50 未找到相同證據，不硬排；不照搬戒牧壁障或痛苦鎮壓。 |
 | **豆腐天尊** | 玉龍補僧 | 沿基礎場玉龍補僧：玉龍約 1:22／4:09／6:36／9:08，歸元約 1:07／4:07／7:22；天尊導體見整團軸。 |
 | **Arielle** | 補聖 | 沿基礎場補聖：精通光環約 1:07／5:38／9:27。 |
 
@@ -14,4 +14,4 @@
 
 **外圍搬球：**先由距離合適且可移動的補師看護，其他補師維持主團血線；搬球者一旦超出射程或有障礙，最近的可移動補師接手。Arita 的飛行／移動與實際天賦尚待本團核對，這版不把他固定指定為每次外出同行者。
 
-基礎場是使用者指定的 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing)（龍／德／玉龍僧／騎／戒牧）；神牧只取 [ZJ6cAzN7TaR3bhQ2 f18](https://tw.warcraftlogs.com/reports/ZJ6cAzN7TaR3bhQ2?fight=18&type=healing)的 Weece，依 phase 對位。所有本團人名都是**預排**。[完整攻略](../../../首領/劇毒7王_The_Coiled_Altar/M/完整攻略.md)與[治療分析](../../../首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)保留角色中立的機制與正常傷害窗口。
+基礎場是使用者指定的 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing)（龍／德／玉龍僧／騎／戒牧）；神牧神化／守護聖靈取 [ZJ f18](https://tw.warcraftlogs.com/reports/ZJ6cAzN7TaR3bhQ2?fight=18&type=healing)，禮頌取 [6fr f17](https://tw.warcraftlogs.com/reports/6frCJh8zTRmjWAMt?fight=17&type=healing)。**基礎場戒牧壁障 2:50／6:46 都需要另補團減；人選未確認前，軸上保留自保提醒。**6:46 禮頌可補血但不能取代壁障減傷。所有本團人名都是**預排**。[完整攻略](../../../首領/劇毒7王_The_Coiled_Altar/M/完整攻略.md)與[治療分析](../../../首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)保留角色中立的機制與正常傷害窗口。

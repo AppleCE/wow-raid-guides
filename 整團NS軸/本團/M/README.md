@@ -14,6 +14,6 @@ M5：四補使用 Arielle／呆小鄭／菈菈跳來跳去／豆腐天尊；天�
 
 M6：Google 固定減傷保留 `00:11 G／01:12 F／02:46 B／03:47 G＋自保／05:21 F／06:22 B`；B 為 Arielle 光環。四補招對準每輪放水後約 3 秒開始的四跳，最後 `06:58` 長場屬指定擊殺未走到的 synthesized draft。全程使用 `ph:1`，需手動匯入，未自動更新遊戲設定。[整團時間軸](../../../整團時間軸/M/劇毒6王.md)。
 
-M7：Arita／菈菈跳來跳去／呆小鄭／豆腐天尊／Arielle 五補 **草稿**。使用者指定 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing) 為龍／德／玉龍僧／騎四補骨架；原戒牧不搬入，由 [ZJ6cAzN7TaR3bhQ2 f18](https://tw.warcraftlogs.com/reports/ZJ6cAzN7TaR3bhQ2?fight=18&type=healing)的神牧按 phase 對位。基礎場約 2:50／6:30／7:08 轉場，映成 `ph:1／2／2.5／3`，共 55 個具名技能提醒；[可讀波次表](../../../整團時間軸/M/劇毒7王.md)。本團 M WCL 尚空白，實戰轉場後要整批重校。此處匯入檔是新版；帳號內的舊草稿版本在 WoW 關閉後才能安全替換。
+M7：Arita／菈菈跳來跳去／呆小鄭／豆腐天尊／Arielle 五補 **草稿**。使用者指定 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing) 為龍／德／玉龍僧／騎四補骨架；原戒牧不搬入。神牧神化／守護聖靈參照 [ZJ f18](https://tw.warcraftlogs.com/reports/ZJ6cAzN7TaR3bhQ2?fight=18&type=healing)，禮頌採轉段更接近的 [6fr f17](https://tw.warcraftlogs.com/reports/6frCJh8zTRmjWAMt?fight=17&type=healing)實際 pattern。基礎場約 2:50／6:30／7:08 轉場，映成 `ph:1／2／2.5／3`，共 **55 個具名技能提醒**；[可讀波次表](../../../整團時間軸/M/劇毒7王.md)另列兩次壁障缺口與自保備註。一般全團自保不是單名補師的插件提醒，不寫入 NSRT。實戰轉場與減傷名單後要整批重校。
 
 M1 鎖定 `C2k8P7HmJqagRn6X` fight 4；M2 鎖定 Google `g4jYdTD1qHFZyNc6` fight 11，綠側 Arielle＋菈菈、紅側呆小鄭＋豆腐；M3 採 **卷軸先知伊庫 → 大副娜瑪 → 商人蓋博**，鎖定 `FGWYcKtZx7M1qHLw` fight 30。三份技能時間都已換成各自的階段相對秒數，不可互抄拉怪秒數。
