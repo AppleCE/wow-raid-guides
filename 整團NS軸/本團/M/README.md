@@ -14,6 +14,6 @@ M5：四補使用 Arielle／呆小鄭／菈菈跳來跳去／豆腐天尊；天�
 
 M6：Google 固定減傷保留 `00:11 G／01:12 F／02:46 B／03:47 G＋自保／05:21 F／06:22 B`；B 為 Arielle 光環。四補招對準每輪放水後約 3 秒開始的四跳，最後 `06:58` 長場屬指定擊殺未走到的 synthesized draft。全程使用 `ph:1`，需手動匯入，未自動更新遊戲設定。[整團時間軸](../../../整團時間軸/M/劇毒6王.md)。
 
-M7：Arita／菈菈跳來跳去／呆小鄭／豆腐天尊／Arielle 五補 **草稿，2026-09-29 更新**。使用者指定 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing) 為王的時間基準；神牧與龍補新版節奏參考 [36pm f5](https://tw.warcraftlogs.com/reports/36pmH8TG2tRMyVWF?fight=5&type=healing)，再按本團五補重新對位。約 2:50／6:30／7:08 轉場，映成 `ph:1／2／2.5／3`，共 **56 個具名技能提醒**；[可讀波次表](../../../整團時間軸/M/劇毒7王.md)標出 2:05 補量缺口與兩次壁障的團減需求。公開補師 NSRT 只列補招，原本斷法留在本團遊戲筆記。實戰轉場與減傷名單確認後要整批重校。
+M7：Arita／菈菈跳來跳去／呆小鄭／豆腐天尊／Arielle 五補 **草稿，2026-09-29 更新**。使用者指定 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing) 為王的時間基準；神牧與龍補新版節奏參考 [36pm f5](https://tw.warcraftlogs.com/reports/36pmH8TG2tRMyVWF?fight=5&type=healing)，再按本團五補重新對位。約 2:50／6:30／7:08 轉場，映成 `ph:1／2／2.5／3`，共 **61 個具名技能提醒**（Google 2:50 首次光環、36pm f5 五次翅膀）；[可讀波次表](../../../整團時間軸/M/劇毒7王.md)標出 2:05 補量缺口與兩次壁障的團減需求。公開補師 NSRT 只列補招，原本斷法留在本團遊戲筆記。實戰轉場與減傷名單確認後要整批重校。
 
 M1 鎖定 `C2k8P7HmJqagRn6X` fight 4；M2 鎖定 Google `g4jYdTD1qHFZyNc6` fight 11，綠側 Arielle＋菈菈、紅側呆小鄭＋豆腐；M3 採 **卷軸先知伊庫 → 大副娜瑪 → 商人蓋博**，鎖定 `FGWYcKtZx7M1qHLw` fight 30。三份技能時間都已換成各自的階段相對秒數，不可互抄拉怪秒數。
