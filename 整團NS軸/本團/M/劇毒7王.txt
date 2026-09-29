@@ -1,7 +1,7 @@
 EncounterID:3429;Name:本團 劇毒 傳奇 7王 盤蛇祭壇 Arita五補草稿;Difficulty:Mythic
 
+time:10;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;dur:5;TTSTimer:5;
 time:18;ph:1;tag:Arita;spellid:370537;text:靜滯開始存;dur:5;TTSTimer:5;
-time:20;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;dur:5;TTSTimer:5;
 time:29;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;dur:10;TTSTimer:10;
 time:42;ph:1;tag:呆小鄭;spellid:200183;text:神化;dur:5;TTSTimer:5;
 time:42;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導體;dur:5;TTSTimer:5;
@@ -13,8 +13,8 @@ time:101;ph:1;tag:菈菈跳來跳去;spellid:391528;text:魂靈召集;dur:10;TTS
 time:109;ph:1;tag:菈菈跳來跳去;spellid:740;text:寧靜;dur:10;TTSTimer:10;
 time:127;ph:1;tag:呆小鄭;spellid:64843;text:神聖禮頌;dur:5;TTSTimer:5;
 time:128;ph:1;tag:Arita;spellid:370537;text:靜滯開始存;dur:5;TTSTimer:5;
+time:130;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;dur:5;TTSTimer:5;
 time:132;ph:1;tag:豆腐天尊;spellid:443028;text:天尊導體;dur:5;TTSTimer:5;
-time:140;ph:1;tag:豆腐天尊;spellid:322118;text:召喚玉龍;dur:5;TTSTimer:5;
 time:157;ph:1;tag:Arita;spellid:370564;text:靜滯釋放;dur:5;TTSTimer:5;
 time:165;ph:1;tag:呆小鄭;spellid:200183;text:神化;dur:5;TTSTimer:5;
 time:170;ph:1;tag:Arielle;spellid:31821;text:精通光環;dur:5;TTSTimer:5;
