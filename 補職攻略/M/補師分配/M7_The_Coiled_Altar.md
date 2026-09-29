@@ -14,6 +14,4 @@
 
 **外圍搬球：**先由距離合適且可移動的補師看護，其他補師維持主團血線；搬球者一旦超出射程或有障礙，最近的可移動補師接手。Arita 的飛行／移動與實際天賦尚待本團核對，這版不把他固定指定為每次外出同行者。
 
-**豆腐搬球與早開玉龍：**0:20／2:20 參考場的補僧本人沒有拿球，本團豆腐則常拿。若當輪持球尚未結束或人在主團治療範圍外，先放球回位，再看血線開玉龍；要固定準點開，RL 須先依當輪搬球表完成工作交接。
-
 基礎場是使用者指定的 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing)（龍／德／玉龍僧／騎／戒牧）；除豆腐天尊外，四補改參考 [Literacy Test f11](https://tw.warcraftlogs.com/reports/trZhBQ7vwWPkRXdM?fight=11&type=healing)，首個光環依 [Google M7 NSRT](https://docs.google.com/spreadsheets/d/1VShJMb8CM0ZEk2goIDGgSPHx6fwMHcktMCP-aPZG-MM/edit?gid=456259495)。**6:43–6:50 接魂**與 **2:05–2:17 清球**仍須實戰核對團血；來源場戒牧在這兩段提供大量有效治療與吸收，本團沒有戒牧，不能只看其他四補 CAST 判定補量等效。來源場 2:49 黑暗、2:51 集結未移植為本團具名團減。所有本團人名都是**預排**。[完整攻略](../../../首領/劇毒7王_The_Coiled_Altar/M/完整攻略.md)與[治療分析](../../../首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)保留角色中立的機制與正常傷害窗口。
