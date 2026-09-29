@@ -7,11 +7,11 @@
 | **Arita** | 龍補 | 靜滯 0:18→0:46、2:08→2:37、4:02 存（來源未見手動釋放）、5:35→6:06、7:48→8:12、9:27→9:41；時光倒轉 1:25／9:59。來源龍補未施放輕風，本軸未預排，不推斷 Arita 未選天賦。 |
 | **菈菈跳來跳去** | 補德 | 寧靜 **1:49／5:36／9:31**；魂靈召集見整團軸。寧靜要有足夠站定位。 |
 | **呆小鄭** | 神牧 | 神化 **0:42／2:45／5:02／7:32／9:55**；守護聖靈 **4:59／9:03**；禮頌 **2:07／4:15／6:51／9:30**。神牧補量不等於戒牧壁障減傷。 |
-| **豆腐天尊** | 玉龍補僧 | 召喚玉龍 **0:20／2:20／4:20／6:36／9:08**；首兩次參考 [Rinmw f2](https://tw.warcraftlogs.com/reports/yjCK2PMZc4VtnD13?fight=2&type=casts&source=2) 和 [Karatekohl f1](https://tw.warcraftlogs.com/reports/XBajL6Cv8YJ1yDQA?fight=1&type=casts&source=12)，4:09 原列因冷卻不足移到 4:20，後兩次沿本團原軸。歸元約 1:07／4:07／7:22；天尊導體見整團軸。 |
-| **Arielle** | 補聖 | 精通光環 **2:50／9:31**：首個依 Google M7 NSRT，第二個依 Literacy Test f11；復仇之怒 **1:18／3:21／5:32／7:47／9:58**，依同場施放按本團 phase 對位。 |
+| **豆腐天尊** | 玉龍補僧 | 召喚玉龍 **0:20／2:20／4:20／6:39／9:39**；前四次參考 [Rinmw f2](https://tw.warcraftlogs.com/reports/yjCK2PMZc4VtnD13?fight=2&type=casts&source=2)，末次參考 [Zollinda f56](https://tw.warcraftlogs.com/reports/Vpbzq4xHNn1JQYDB?fight=56&type=casts&source=15)。6:39 先鋪以顧 6:43 接魂；9:39 顧第二盾後的高補量窗。還魂術約 1:07／4:07／7:22，4:07 與 4:20 玉龍分顧第一盾前、後段；天尊導體見整團軸。 |
+| **Arielle** | 補聖 | 精通光環 **2:50／6:40／9:40**：首個依 Google M7 NSRT，後兩個為本團對位戒牧高峰與團傷的合成建議；相鄰至少三分鐘。[Wide f18](https://tw.warcraftlogs.com/reports/ZJ6cAzN7TaR3bhQ2?fight=18&type=casts) 有三次約 2:51／6:52／9:58 參考節奏。復仇之怒 **1:18／3:21／5:32／7:47／9:58**，依 Literacy Test 同場施放按本團 phase 對位。 |
 
 **炸彈點名：五補共同照顧，不設固定主補。** 點名時開始看血，爆炸後持續到本人收魂回位。有人被點、離距、失去視線、死亡或正在處理強制機制時，其餘四補直接接手，無需等指定者喊交接。與炸彈同時出現的治療吸收要補穿；純粹未斷法、圈未覆到怪或收魂失敗仍按機制處理，不靠加開治療技能掩蓋。
 
 **外圍搬球：**先由距離合適且可移動的補師看護，其他補師維持主團血線；搬球者一旦超出射程或有障礙，最近的可移動補師接手。Arita 的飛行／移動與實際天賦尚待本團核對，這版不把他固定指定為每次外出同行者。
 
-基礎場是使用者指定的 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing)（龍／德／玉龍僧／騎／戒牧）；除豆腐天尊外，四補改參考 [Literacy Test f11](https://tw.warcraftlogs.com/reports/trZhBQ7vwWPkRXdM?fight=11&type=healing)，首個光環依 [Google M7 NSRT](https://docs.google.com/spreadsheets/d/1VShJMb8CM0ZEk2goIDGgSPHx6fwMHcktMCP-aPZG-MM/edit?gid=456259495)。**6:43–6:50 接魂**與 **2:05–2:17 清球**仍須實戰核對團血；來源場戒牧在這兩段提供大量有效治療與吸收，本團沒有戒牧，不能只看其他四補 CAST 判定補量等效。來源場 2:49 黑暗、2:51 集結未移植為本團具名團減。所有本團人名都是**預排**。[完整攻略](../../../首領/劇毒7王_The_Coiled_Altar/M/完整攻略.md)與[治療分析](../../../首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)保留角色中立的機制與正常傷害窗口。
+基礎場是使用者指定的 [8ypRArNLaH7nwcvJ f27](https://tw.warcraftlogs.com/reports/8ypRArNLaH7nwcvJ?fight=27&type=healing)（龍／德／玉龍僧／騎／戒牧）；四補以 [Literacy Test f11](https://tw.warcraftlogs.com/reports/trZhBQ7vwWPkRXdM?fight=11&type=healing) 為骨架，首個光環依 [Google M7 NSRT](https://docs.google.com/spreadsheets/d/1VShJMb8CM0ZEk2goIDGgSPHx6fwMHcktMCP-aPZG-MM/edit?gid=456259495)，玉龍與後兩次光環依上方標示調整。**6:43–6:50 接魂**與 **2:05–2:17 清球**仍須實戰核對團血；來源場戒牧在這兩段提供大量有效治療與吸收，本團沒有戒牧，不能只看其他四補 CAST 判定補量等效。來源場 2:49 黑暗、2:51 集結未移植為本團具名團減。所有本團人名都是**預排**。[完整攻略](../../../首領/劇毒7王_The_Coiled_Altar/M/完整攻略.md)與[治療分析](../../../首領/劇毒7王_The_Coiled_Altar/M/治療分析.md)保留角色中立的機制與正常傷害窗口。
