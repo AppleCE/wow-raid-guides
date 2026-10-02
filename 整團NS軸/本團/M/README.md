@@ -1,5 +1,7 @@
 # 本團傳奇 NS 軸
 
+[直接瀏覽 HTML 版（可選王、篩選角色與複製完整 NSRT）](https://applece.github.io/wow-raid-guides/%E6%95%B4%E5%9C%98NS%E8%BB%B8/%E6%9C%AC%E5%9C%98/M/)。本頁內嵌下列 TXT 的完整內容；TXT 改動後請執行 `python -X utf8 generate_html.py` 重建網頁。
+
 - [劇毒 1 王：纏魂者尼札利（四補）](劇毒1王.txt)
 - [劇毒 2 王：墓封哨兵（四補、固定分側）](劇毒2王.txt)
 - [劇毒 3 王：迷路的探險者（四補）](劇毒3王.txt)
