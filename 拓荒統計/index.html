@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>劇毒深淵傳奇拓荒統計</title>
+<title>劇毒深淵與克希斯傳奇拓荒統計</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
@@ -40,6 +40,7 @@ main{max-width:1344px;margin:0 auto;padding:32px 24px 64px;display:flex;flex-dir
 .sugg div:hover,.sugg div.on{background:var(--card-2)}
 .sugg span{color:var(--ink-3);font-size:12px}
 .card{border-radius:14px;background:var(--card);border:1px solid var(--line);padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.card[hidden]{display:none}
 .card h2{font-size:18px;font-weight:600}
 .card h3{font-size:16px;font-weight:600}
 .hint{font-size:13px;color:var(--ink-3);margin:0}
@@ -107,7 +108,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
 .mcard .g div em{font-style:normal;color:var(--ink-3)}
 .mcard .g div b{font-family:Manrope,sans-serif;font-size:15px;font-weight:600}
 .mcard .g div b.prog{font-size:12px;color:#8b8983;font-weight:400}.mcard .g div b.none{color:var(--ink-5)}
-.kill-grid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;margin-top:14px}
+.kill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:8px;margin-top:14px}
 .kill-box{background:var(--card-2);border-radius:10px;padding:12px 8px;text-align:center}
 .kill-box span{display:block;color:var(--ink-3);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kill-box b{display:block;font-family:Manrope,sans-serif;font-size:22px;line-height:1.3;margin-top:4px}
@@ -129,7 +130,7 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
 <header class="topbar">
   <div class="brand">
     <div class="logo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#7fb8ff" stroke-width="1.6" stroke-linecap="round"><path d="M2 12.5h12M4 10V6M8 10V3.5M12 10V7.5"/></svg></div>
-    <h1>劇毒深淵 · 傳奇拓荒統計</h1>
+    <h1>劇毒深淵與克希斯 · 傳奇拓荒統計</h1>
     <span class="pill" id="meta">載入中…</span>
   </div>
   <nav><a href="README.md">Markdown 表</a><a href="history/">歷史快照</a><a href="#about">資料說明</a></nav>
@@ -155,8 +156,14 @@ footer{font-size:12px;color:var(--ink-4);line-height:1.7}
   </section>
 
   <section class="card">
-    <div><h2>各王目前過王團數</h2><p class="hint" id="killCountNote">M1–M8 取 WCL Progress 公開榜；浪縛單王固定為 2026-08-31 最終快照，後續停止更新。</p></div>
+    <div><h2>各王目前過王團數</h2><p class="hint" id="killCountNote">M1–M8 取 WCL Progress 公開榜；浪縛與克希斯單王取 Raider.IO 世界傳奇榜。</p></div>
     <div class="kill-grid" id="killCounts"></div>
+  </section>
+
+  <section class="card" id="kithixSection" hidden>
+    <div><h2>克希斯單王：過王裝等與拓荒把數</h2><p class="hint" id="kithixNote"></p></div>
+    <div class="gc-grid" id="kithixSummary"></div>
+    <div class="wrap"><table id="kithixTable"></table></div>
   </section>
 
   <section class="card">
@@ -224,7 +231,7 @@ fetch('data/latest.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;buck
 
 function init(){
   $('#meta').textContent=`最後更新：${D.checked_at}（台北時間） · 前 ${D.top} 公會 · 對到 ${D.resolved}`;
-  const order=b=>b.name==='Nymrissa Wavecaller'?0:+((b.short.match(/^M(\d+)/)||[])[1]||99);
+  const order=b=>b.name==='Nymrissa Wavecaller'?0:b.name==="Kith'ix"?9:+((b.short.match(/^M(\d+)/)||[])[1]||99);
   $('#killCounts').innerHTML=[...D.bosses].sort((a,b)=>order(a)-order(b)).map(b=>`<div class="kill-box"><span>${b.short}</span><b>${b.world_killed_guilds??'—'}</b><small>${b.detail_updating===false?'過王數持續；明細已封存':(b.world_kill_source||'尚未更新')}</small></div>`).join('');
   if(D.world_kills_checked_at)$('#killCountNote').textContent+=` 同次更新：${D.world_kills_checked_at}（台北時間）。`;
   const regs=[...new Set(D.guilds.map(g=>g.region))].sort();
@@ -234,11 +241,21 @@ function init(){
   seg('#gview',v=>{gview=v;drawGuilds()});
   seg('#region',v=>{region=v;shown=60;drawGuilds()});
   seg('#rankBand',v=>{rankBand=v;shown=60;drawGuilds()});
-  buildTabs();drawChart();drawTables();drawGuilds();
+  buildTabs();drawChart();drawTables();drawGuilds();drawKithix();
   $('#q').addEventListener('input',()=>{shown=60;drawGuilds()});
   setupFind();
-  $('#about').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 世界進度榜</a>（名單、上版排名）、Warcraft Logs 進度 API（M1–M8 過王團數與前線王把數）、raider.io Live Tracking（WCL 沒有時補）。浪縛以 Raider.IO 世界傳奇榜更新過王數；已封存明細保留停止前快照。原始資料 <a href="data/latest.json">data/latest.json</a>、每次快照 <a href="history/">history/</a>。`;
+  $('#about').innerHTML=`資料來源：<a href="https://raider.io/raids/${D.raid}/mythic">raider.io 世界進度榜</a>、Warcraft Logs 進度 API（M1–M8 過王團數與前線王把數）。克希斯首殺把數取 Raider.IO attempts／有效 Live Tracking，裝等取時間吻合的 WCL 公開首殺紀錄；缺值不列入平均。原始資料 <a href="data/latest.json">data/latest.json</a>、每次快照 <a href="history/">history/</a>。`;
   const h=location.hash.slice(1);if(h){const g=searchPool().find(x=>x.guild===decodeURIComponent(h));if(g){$('#find').value=g.guild;selectGuild(g)}}
+}
+function drawKithix(){
+  const b=D.bosses.find(x=>x.name==="Kith'ix"),rows=D.kithix_guilds||[];
+  if(!b)return;
+  $('#kithixSection').hidden=false;
+  const pulls=b.overall?.pulls,ilvl=b.overall?.ilvl;
+  $('#kithixNote').textContent=`${D.kithix_checked_at||D.checked_at}（台北時間） · 首殺把數與裝等各自按有資料的公會計算；— 表示沒有可核對資料。`;
+  $('#kithixSummary').innerHTML=`<div class="kpi"><div class="l">已過王</div><div class="v"><b>${b.world_killed_guilds}</b><small>團</small></div></div><div class="kpi"><div class="l">平均拓荒把數</div><div class="v"><b>${pulls?fmt(pulls.mean):'—'}</b><small>把</small></div><span class="d">${pulls?pulls.n:0} 團有紀錄 · 中位 ${pulls?fmt(pulls.median):'—'}</span></div><div class="kpi"><div class="l">平均擊殺裝等</div><div class="v"><b>${ilvl?fmt(ilvl.mean):'—'}</b></div><span class="d">${ilvl?ilvl.n:0} 團有公開首殺 LOG</span></div>`;
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  $('#kithixTable').innerHTML='<thead><tr><th>首殺排名</th><th class="l">公會</th><th>把數</th><th>擊殺裝等</th><th class="l">WCL</th></tr></thead><tbody>'+rows.map(r=>`<tr><td>${r.rank}</td><td class="l">${esc(r.guild)} · ${esc(r.realm)}（${esc(r.region)}）</td><td>${r.pulls??'—'}</td><td>${r.ilvl??'—'}</td><td class="l">${r.report?`<a href="${esc(r.report)}" target="_blank" rel="noopener">首殺紀錄</a>`:'—'}</td></tr>`).join('')+'</tbody>';
 }
 function seg(sel,cb){const el=$(sel);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...el.children].forEach(c=>c.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');cb(b.dataset.v)})}
 
